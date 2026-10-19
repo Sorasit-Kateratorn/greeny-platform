@@ -15,7 +15,7 @@ export async function main() {
       name: "สวนดินดี ออร์แกนิค",
       phone: "0819991111",
       role: UserRole.SELLER,
-      avatarUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRmtW_2gBEijmck1lpmDmR6Xy8J0eW-Yc-44tL8OKaQvd8XvQHFqYpHsEVzEr0uQCuYqRmMa8afjDn7G9PCqH9ETPduyllujJFaOGhsJbHBUECw5UlUFVQWmMsxu3DydQP-a1ld5VY0BctQvyTDhCDDxu1Ca9ZNtYTn_ItjFcCoXNlmDZtPRwj7wP1zKM9UhEEkIOLYeuDYEzaA-51gWaa0LN3YJyrP1gtVJbbfqtiHy5BbjZ02PZC",
+      avatarUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop",
       walletBalance: 124580.0,
       carbonSavedKg: 3420.5,
     },
@@ -30,7 +30,7 @@ export async function main() {
       name: "Green Living Crafts",
       phone: "0828882222",
       role: UserRole.SELLER,
-      avatarUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBkN4-Uv7vucXC8jOtVfUpmmk_m0Dh17O6fbTvXle8Bg7mcFtFZfTzRBIM8nmoFx_ITlbRdAhIUSpnF8jEEiV0yXLlOLPtesmF1YgKNnb4Yuc3UVs8NB9NWKKwtVYI7wCwX9w6snEUrZZbBlHLwEZxm5MDmvwr_VqK_qdSDnO_ag_HDj1WpeMVBiwaS4ITx75VTQ-iOmPQZ5W4v1xKrANzJJYG87lJxPSVMmFDb9SgyJhNkQknCImyM",
+      avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
       walletBalance: 45820.5,
       carbonSavedKg: 1890.0,
     },
@@ -273,7 +273,7 @@ export async function main() {
       nutritionInfo: "Cornstarch 99% + Water 1%",
       hashtags: ["#โฟมละลายน้ำ", "#แป้งข้าวโพด", "#BioPeanuts"],
       images: [
-        "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
       ],
       retailPrice: 49.0,
       wholesaleTiersJson: [
@@ -398,7 +398,7 @@ export async function main() {
       title: "สาธิตกันกระแทกจากผักตบชวา อบแห้ง 1 กก.",
       caption: "ชมการทดสอบโยนกล่องพัสดุบรรจุขวดแก้วจากความสูง 1.5 เมตร พร้อมรับโค้ดลดพิเศษ 20% ในไลฟ์สดนี้!",
       mediaUrls: [
-        "https://lh3.googleusercontent.com/aida-public/AB6AXuBRmtW_2gBEijmck1lpmDmR6Xy8J0eW-Yc-44tL8OKaQvd8XvQHFqYpHsEVzEr0uQCuYqRmMa8afjDn7G9PCqH9ETPduyllujJFaOGhsJbHBUECw5UlUFVQWmMsxu3DydQP-a1ld5VY0BctQvyTDhCDDxu1Ca9ZNtYTn_ItjFcCoXNlmDZtPRwj7wP1zKM9UhEEkIOLYeuDYEzaA-51gWaa0LN3YJyrP1gtVJbbfqtiHy5BbjZ02PZC",
+        "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
       ],
       likesCount: 1240,
       viewsCount: 342,
@@ -456,7 +456,7 @@ export async function main() {
       title: "รีวิวโฟมแป้งข้าวโพด ละลายน้ำโชว์ให้ดูจะๆ",
       caption: "ได้รับของแล้ว แกะกล่องมาคือสะอาดมาก เอาไปแช่น้ำ 1 นาทีละลายเกลี้ยง ไม่เหลือขยะให้รกบ้านเลย ประทับใจ 10/10",
       mediaUrls: [
-        "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?w=800&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
       ],
       likesCount: 312,
       viewsCount: 1850,

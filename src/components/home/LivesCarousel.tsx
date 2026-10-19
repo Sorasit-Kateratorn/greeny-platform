@@ -10,7 +10,7 @@ const SAMPLE_LIVES = [
     presenterName: "GreenyBKK",
     viewersCount: 342,
     likesCount: 1240,
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRmtW_2gBEijmck1lpmDmR6Xy8J0eW-Yc-44tL8OKaQvd8XvQHFqYpHsEVzEr0uQCuYqRmMa8afjDn7G9PCqH9ETPduyllujJFaOGhsJbHBUECw5UlUFVQWmMsxu3DydQP-a1ld5VY0BctQvyTDhCDDxu1Ca9ZNtYTn_ItjFcCoXNlmDZtPRwj7wP1zKM9UhEEkIOLYeuDYEzaA-51gWaa0LN3YJyrP1gtVJbbfqtiHy5BbjZ02PZC",
+    image: "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
     pinnedProduct: {
       id: "prod-hyacinth-1",
       name: "ผักตบชวาอบแห้งกันกระแทก 1 กิโลกรัม",
@@ -58,11 +58,11 @@ const SAMPLE_LIVES = [
     presenterName: "Eco Innovate TH",
     viewersCount: 420,
     likesCount: 1980,
-    image: "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
     pinnedProduct: {
       id: "prod-cornstarch-1",
       name: "โฟมแป้งข้าวโพดละลายน้ำ (Bio Peanuts)",
-      image: "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
       retailPrice: 49.0,
       originalPrice: 65.0,
       soldCount: 3100,

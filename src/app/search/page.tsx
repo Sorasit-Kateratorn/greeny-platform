@@ -98,7 +98,7 @@ const ALL_SEARCH_PRODUCTS = [
   {
     id: "prod-cornstarch-1",
     name: "โฟมแป้งข้าวโพดละลายน้ำ (Bio Peanuts)",
-    image: "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
     retailPrice: 49.0,
     storeName: "Green Living Crafts Thailand",
     soldCount: 3100,
