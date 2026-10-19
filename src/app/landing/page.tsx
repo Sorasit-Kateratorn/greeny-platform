@@ -767,13 +767,25 @@ export default function LandingPage() {
                 <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                   ปัญญาประดิษฐ์อัจฉริยะที่ช่วยคำนวณขนาดกล่องพัสดุ แนะนำวัสดุทดแทนพลาสติกตามน้ำหนักสินค้า และประเมินค่าลดคาร์บอน (Carbon Reduction Estimator) ได้แม่นยำ
                 </p>
-                <Link
-                  href="/#chat"
-                  className="inline-flex items-center gap-1 text-primary font-display font-bold text-xs sm:text-sm mt-1 hover:underline"
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (typeof window !== "undefined") {
+                      window.dispatchEvent(
+                        new CustomEvent("open-greeny-chat", {
+                          detail: {
+                            mode: "AI",
+                            prompt: AI_PRESET_QUESTIONS[selectedAiIndex].q,
+                          },
+                        })
+                      );
+                    }
+                  }}
+                  className="inline-flex items-center gap-1.5 text-primary font-display font-bold text-xs sm:text-sm mt-1 hover:underline cursor-pointer text-left py-1"
                 >
-                  <span>ทดลองปรึกษา Greeny AI ฟรี</span>
+                  <span>ทดลองถาม Greeny AI ด้วยคำถามนี้</span>
                   <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-                </Link>
+                </button>
               </div>
             </div>
 

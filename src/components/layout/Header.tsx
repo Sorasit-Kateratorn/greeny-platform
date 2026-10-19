@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartContext";
@@ -13,6 +13,20 @@ export function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [chatInitialMode, setChatInitialMode] = useState<"AI" | "SUPPORT">("AI");
+  const [chatInitialPrompt, setChatInitialPrompt] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    const handleOpenChat = (e: any) => {
+      const mode = e?.detail?.mode || "AI";
+      const prompt = e?.detail?.prompt;
+      setChatInitialMode(mode);
+      setChatInitialPrompt(prompt);
+      setIsChatOpen(true);
+    };
+
+    window.addEventListener("open-greeny-chat", handleOpenChat);
+    return () => window.removeEventListener("open-greeny-chat", handleOpenChat);
+  }, []);
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -209,11 +223,33 @@ export function Header() {
         </div>
       </header>
 
+      {/* Floating Greeny AI Chat Trigger Button */}
+      <button
+        onClick={() => {
+          setChatInitialMode("AI");
+          setChatInitialPrompt(undefined);
+          setIsChatOpen(true);
+        }}
+        className="fixed bottom-6 right-6 z-40 bg-gradient-to-r from-primary to-emerald-700 hover:from-primary-container hover:to-primary text-on-primary font-display font-bold text-xs sm:text-sm px-4 py-3 rounded-full shadow-2xl flex items-center gap-2.5 border border-white/20 transition-all hover:scale-105 active:scale-95 group cursor-pointer"
+        aria-label="Open Greeny AI Chat"
+        title="ปรึกษา Greeny AI Advisor (Google AI Studio)"
+      >
+        <span className="relative flex h-2.5 w-2.5">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+        </span>
+        <span className="material-symbols-outlined text-[20px] group-hover:rotate-12 transition-transform">
+          smart_toy
+        </span>
+        <span>Chat AI</span>
+      </button>
+
       {/* Global Greeny Chat Modal */}
       <GreenyChatModal
         isOpen={isChatOpen}
         onClose={() => setIsChatOpen(false)}
         initialMode={chatInitialMode}
+        initialPrompt={chatInitialPrompt}
       />
     </>
   );
