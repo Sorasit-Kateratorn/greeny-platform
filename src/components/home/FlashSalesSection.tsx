@@ -8,7 +8,7 @@ const FLASH_PRODUCTS = [
   {
     id: "prod-hyacinth-1",
     name: "ผักตบชวาอบแห้งกันกระแทก 1 กิโลกรัม",
-    image: "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
+    image: "/images/products/hyacinth-cushion.jpg",
     retailPrice: 59.0,
     originalPrice: 75.0,
     storeName: "สวนดินดี ออร์แกนิค",
@@ -26,7 +26,7 @@ const FLASH_PRODUCTS = [
   {
     id: "prod-cornstarch-1",
     name: "โฟมแป้งข้าวโพดละลายน้ำ (Bio Peanuts)",
-    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
+    image: "/images/products/cornstarch-peanuts.jpg",
     retailPrice: 49.0,
     originalPrice: 65.0,
     storeName: "Green Living Crafts Thailand",
@@ -44,7 +44,7 @@ const FLASH_PRODUCTS = [
   {
     id: "prod-straw-1",
     name: "ฟางข้าวอัดเส้นกันกระแทกปลอดสารพิษ",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop",
+    image: "/images/products/rice-straw.jpg",
     retailPrice: 45.0,
     originalPrice: 60.0,
     storeName: "สวนดินดี ออร์แกนิค",
@@ -63,7 +63,7 @@ const FLASH_PRODUCTS = [
   {
     id: "prod-coir-1",
     name: "ขุยมะพร้าวอัดแผ่นกันกระแทก (ต้านแรงกด 15 kg)",
-    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop",
+    image: "/images/products/coconut-coir.jpg",
     retailPrice: 75.0,
     originalPrice: 95.0,
     storeName: "Green Living Crafts Thailand",

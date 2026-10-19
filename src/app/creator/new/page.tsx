@@ -23,7 +23,7 @@ const SAMPLE_PRODUCTS: AttachedProduct[] = [
     originalPrice: 79,
     discountPct: 25,
     commission: "15%",
-    imageUrl: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=300&q=80",
+    imageUrl: "/images/products/hyacinth-cushion.jpg",
   },
   {
     id: "prod-2",
@@ -32,7 +32,7 @@ const SAMPLE_PRODUCTS: AttachedProduct[] = [
     originalPrice: 250,
     discountPct: 24,
     commission: "12%",
-    imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&q=80",
+    imageUrl: "/images/products/mycelium-foam.jpg",
   },
 ];
 
@@ -43,7 +43,7 @@ const PRESET_ASSETS = [
     duration: "0:45",
     size: "2.4 MB",
     type: "video",
-    url: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80",
+    url: "/images/products/coconut-coir.jpg",
   },
   {
     id: "asset-2",
@@ -51,7 +51,7 @@ const PRESET_ASSETS = [
     duration: "1:12",
     size: "6.1 MB",
     type: "video",
-    url: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=600&q=80",
+    url: "/images/reviews/rev-hyacinth-bakery.jpg",
   },
   {
     id: "asset-3",
@@ -59,7 +59,7 @@ const PRESET_ASSETS = [
     duration: "ภาพนิ่ง",
     size: "1.8 MB",
     type: "image",
-    url: "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=600&q=80",
+    url: "/images/products/hyacinth-cushion.jpg",
   },
 ];
 

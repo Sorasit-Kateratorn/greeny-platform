@@ -43,7 +43,7 @@ const AI_KNOWLEDGE_BASE: Record<string, { analysis: string; products: Recommende
       {
         id: "prod-coir-1",
         name: "ขุยมะพร้าวอัดแผ่นกันกระแทก (ต้านแรงกด 15 kg)",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop",
+        image: "/images/products/coconut-coir.jpg",
         retailPrice: 75.0,
         storeName: "Green Living Crafts Thailand",
         rating: 4.98,
@@ -53,7 +53,7 @@ const AI_KNOWLEDGE_BASE: Record<string, { analysis: string; products: Recommende
       {
         id: "prod-bagasse-1",
         name: "ถาดชานอ้อยขึ้นรูปกันกระแทกสำหรับขวดแก้ว",
-        image: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&auto=format&fit=crop",
+        image: "/images/products/bagasse-tray.jpg",
         retailPrice: 65.0,
         storeName: "สวนดินดี ออร์แกนิค",
         rating: 4.85,
@@ -63,7 +63,7 @@ const AI_KNOWLEDGE_BASE: Record<string, { analysis: string; products: Recommende
       {
         id: "prod-mycelium-1",
         name: "แผ่นโฟมเห็ดชีวมวลกันกระแทก (Mycelium)",
-        image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&auto=format&fit=crop",
+        image: "/images/products/mycelium-foam.jpg",
         retailPrice: 89.0,
         storeName: "Green Living Crafts Thailand",
         rating: 4.92,
@@ -79,7 +79,7 @@ const AI_KNOWLEDGE_BASE: Record<string, { analysis: string; products: Recommende
       {
         id: "prod-hyacinth-1",
         name: "ผักตบชวาอบแห้งกันกระแทก 1 กิโลกรัม",
-        image: "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
+        image: "/images/products/hyacinth-cushion.jpg",
         retailPrice: 59.0,
         storeName: "สวนดินดี ออร์แกนิค",
         rating: 4.95,
@@ -89,7 +89,7 @@ const AI_KNOWLEDGE_BASE: Record<string, { analysis: string; products: Recommende
       {
         id: "prod-cornstarch-1",
         name: "โฟมแป้งข้าวโพดละลายน้ำ (Bio Peanuts)",
-        image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
+        image: "/images/products/cornstarch-peanuts.jpg",
         retailPrice: 49.0,
         storeName: "Green Living Crafts Thailand",
         rating: 4.96,
@@ -99,7 +99,7 @@ const AI_KNOWLEDGE_BASE: Record<string, { analysis: string; products: Recommende
       {
         id: "prod-honeycomb-1",
         name: "กระดาษคราฟท์รังผึ้งย่อยสลายได้ (Honeycomb)",
-        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop",
+        image: "/images/products/honeycomb-paper.jpg",
         retailPrice: 69.0,
         storeName: "Green Living Crafts Thailand",
         rating: 4.94,

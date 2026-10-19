@@ -125,8 +125,7 @@ export async function main() {
       nutritionInfo: "เซลลูโลสธรรมชาติ 100% ย่อยสลายตามธรรมชาติกลายเป็นปุ๋ยบำรุงดิน",
       hashtags: ["#ผักตบชวา", "#กันกระแทก", "#ลดขยะ", "#พลาสติกฟรี", "#GreenMall"],
       images: [
-        "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1617791160536-598cf32026fb?w=800&auto=format&fit=crop",
+        "/images/products/hyacinth-cushion.jpg",
       ],
       retailPrice: 59.0,
       wholesaleTiersJson: [
@@ -157,7 +156,7 @@ export async function main() {
       nutritionInfo: "ฟางข้าวอินทรีย์ ย่อยสลาย 100%",
       hashtags: ["#ฟางข้าว", "#กันกระแทกอินทรีย์", "#บรรจุภัณฑ์รักษ์โลก"],
       images: [
-        "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop",
+        "/images/products/rice-straw.jpg",
       ],
       retailPrice: 45.0,
       wholesaleTiersJson: [
@@ -187,7 +186,7 @@ export async function main() {
       nutritionInfo: "กากมะพร้าวผสมน้ำยางพาราธรรมชาติ ย่อยสลายใน 120 วัน",
       hashtags: ["#ขุยมะพร้าว", "#ต้านแรงกด15kg", "#ขนส่งขวดแก้ว", "#กันกระแทก"],
       images: [
-        "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop",
+        "/images/products/coconut-coir.jpg",
       ],
       retailPrice: 75.0,
       wholesaleTiersJson: [
@@ -217,7 +216,7 @@ export async function main() {
       nutritionInfo: "Pure Mushroom Mycelium & Agricultural Byproduct",
       hashtags: ["#เส้นใยเห็ด", "#Mycelium", "#ZeroWaste", "#โฟมชีวภาพ"],
       images: [
-        "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&auto=format&fit=crop",
+        "/images/products/mycelium-foam.jpg",
       ],
       retailPrice: 89.0,
       wholesaleTiersJson: [
@@ -245,7 +244,7 @@ export async function main() {
       nutritionInfo: "กากอ้อยเหลือใช้จากอุตสาหกรรมน้ำตาล ย่อยสลายได้ 100%",
       hashtags: ["#ชานอ้อย", "#ถาดล็อคขวด", "#ย่อยสลายได้"],
       images: [
-        "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&auto=format&fit=crop",
+        "/images/products/bagasse-tray.jpg",
       ],
       retailPrice: 65.0,
       wholesaleTiersJson: [
@@ -273,7 +272,7 @@ export async function main() {
       nutritionInfo: "Cornstarch 99% + Water 1%",
       hashtags: ["#โฟมละลายน้ำ", "#แป้งข้าวโพด", "#BioPeanuts"],
       images: [
-        "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
+        "/images/products/cornstarch-peanuts.jpg",
       ],
       retailPrice: 49.0,
       wholesaleTiersJson: [
@@ -303,7 +302,7 @@ export async function main() {
       nutritionInfo: "ก้านกล้วยอินทรีย์ 100%",
       hashtags: ["#ก้านกล้วย", "#งานฝีมือ", "#กันกระแทกธรรมชาติ"],
       images: [
-        "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?w=800&auto=format&fit=crop",
+        "/images/products/banana-rope.jpg",
       ],
       retailPrice: 55.0,
       wholesaleTiersJson: [
@@ -331,7 +330,7 @@ export async function main() {
       nutritionInfo: "100% Recycled Kraft Paper",
       hashtags: ["#กระดาษรังผึ้ง", "#HoneycombPaper", "#พลาสติกฟรี"],
       images: [
-        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop",
+        "/images/products/honeycomb-paper.jpg",
       ],
       retailPrice: 69.0,
       wholesaleTiersJson: [
@@ -359,7 +358,7 @@ export async function main() {
       nutritionInfo: "เมล็ดข้าวโพดพันธุ์ไทย 100%",
       hashtags: ["#โฟมป๊อปคอร์น", "#เป็นมิตรต่อสิ่งแวดล้อม", "#อาหารปลา"],
       images: [
-        "https://images.unsplash.com/photo-1578849278619-e73505e9610f?w=800&auto=format&fit=crop",
+        "/images/products/popcorn-cushion.jpg",
       ],
       retailPrice: 39.0,
       wholesaleTiersJson: [
@@ -381,7 +380,11 @@ export async function main() {
   for (const p of productsData) {
     await prisma.product.upsert({
       where: { id: p.id },
-      update: {},
+      update: {
+        images: p.images,
+        name: p.name,
+        description: p.description,
+      },
       create: p,
     });
   }
@@ -389,7 +392,9 @@ export async function main() {
   // 4. Create Greeny Lives Stream Posts
   await prisma.socialPost.upsert({
     where: { id: "post-live-01" },
-    update: {},
+    update: {
+      mediaUrls: ["/images/products/hyacinth-cushion.jpg"],
+    },
     create: {
       id: "post-live-01",
       authorId: sellerUser1.id,
@@ -398,7 +403,7 @@ export async function main() {
       title: "สาธิตกันกระแทกจากผักตบชวา อบแห้ง 1 กก.",
       caption: "ชมการทดสอบโยนกล่องพัสดุบรรจุขวดแก้วจากความสูง 1.5 เมตร พร้อมรับโค้ดลดพิเศษ 20% ในไลฟ์สดนี้!",
       mediaUrls: [
-        "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
+        "/images/products/hyacinth-cushion.jpg",
       ],
       likesCount: 1240,
       viewsCount: 342,
@@ -408,7 +413,9 @@ export async function main() {
 
   await prisma.socialPost.upsert({
     where: { id: "post-live-02" },
-    update: {},
+    update: {
+      mediaUrls: ["/images/products/coconut-coir.jpg"],
+    },
     create: {
       id: "post-live-02",
       authorId: sellerUser2.id,
@@ -417,7 +424,7 @@ export async function main() {
       title: "ทดสอบการรับแรงกด 15 kg ของขุยมะพร้าวอัดแผ่น",
       caption: "ทดสอบจริงด้วยเครื่องกดน้ำหนักมาตรฐาน มั่นใจได้ว่าส่งขวดแก้วไม่แตกแน่นอน สั่งซื้อวันนี้ส่งฟรี!",
       mediaUrls: [
-        "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop",
+        "/images/products/coconut-coir.jpg",
       ],
       likesCount: 890,
       viewsCount: 215,
@@ -428,7 +435,9 @@ export async function main() {
   // 5. Create UGC & External Lemon8 Reviews (PDF Pages 30–31)
   await prisma.socialPost.upsert({
     where: { id: "post-rev-01" },
-    update: {},
+    update: {
+      mediaUrls: ["/images/reviews/rev-hyacinth-bakery.jpg"],
+    },
     create: {
       id: "post-rev-01",
       authorId: buyerUser.id,
@@ -436,7 +445,7 @@ export async function main() {
       title: "เปลี่ยนมาใช้ผักตบชวาแทนบับเบิ้ล ลูกค้าชมเพียบ! 🌿📦",
       caption: "เปิดร้านขนมออนไลน์มา 3 ปี ลูกค้าชอบมากที่เปลี่ยนมาใช้ผักตบชวา หอมกลิ่นธรรมชาติ ขนมไม่แตกเลยสักกล่อง แถมเอาไปใส่ต้นไม้ต่อได้ด้วย แนะนำสั่งแพ็คราคาส่ง 12 กก. คุ้มมาก!",
       mediaUrls: [
-        "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
+        "/images/reviews/rev-hyacinth-bakery.jpg",
       ],
       externalSourceUrl: "https://www.lemon8-app.com/@ecolover_bkk/post/7123982341",
       externalPlatform: "Lemon8",
@@ -448,7 +457,9 @@ export async function main() {
 
   await prisma.socialPost.upsert({
     where: { id: "post-rev-02" },
-    update: {},
+    update: {
+      mediaUrls: ["/images/reviews/rev-cornstarch-dissolving.jpg"],
+    },
     create: {
       id: "post-rev-02",
       authorId: buyerUser.id,
@@ -456,7 +467,7 @@ export async function main() {
       title: "รีวิวโฟมแป้งข้าวโพด ละลายน้ำโชว์ให้ดูจะๆ",
       caption: "ได้รับของแล้ว แกะกล่องมาคือสะอาดมาก เอาไปแช่น้ำ 1 นาทีละลายเกลี้ยง ไม่เหลือขยะให้รกบ้านเลย ประทับใจ 10/10",
       mediaUrls: [
-        "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
+        "/images/reviews/rev-cornstarch-dissolving.jpg",
       ],
       likesCount: 312,
       viewsCount: 1850,

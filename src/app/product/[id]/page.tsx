@@ -21,7 +21,7 @@ const SAMPLE_PRODUCT = {
   carbonOffsetKg: 0.85,
   size: "1 กิโลกรัม (ประมาณ 100 ลิตรหลังฟู)",
   images: [
-    "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
+    "/images/products/hyacinth-cushion.jpg",
     "https://images.unsplash.com/photo-1617791160536-598cf32026fb?w=800&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&auto=format&fit=crop",
   ],

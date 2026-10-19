@@ -8,7 +8,7 @@ const ALL_SEARCH_PRODUCTS = [
   {
     id: "prod-hyacinth-1",
     name: "ผักตบชวาอบแห้งกันกระแทก 1 กิโลกรัม",
-    image: "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
+    image: "/images/products/hyacinth-cushion.jpg",
     retailPrice: 59.0,
     storeName: "สวนดินดี ออร์แกนิค",
     soldCount: 1420,
@@ -26,7 +26,7 @@ const ALL_SEARCH_PRODUCTS = [
   {
     id: "prod-straw-1",
     name: "ฟางข้าวอัดเส้นกันกระแทกปลอดสารพิษ",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop",
+    image: "/images/products/rice-straw.jpg",
     retailPrice: 45.0,
     storeName: "สวนดินดี ออร์แกนิค",
     soldCount: 980,
@@ -45,7 +45,7 @@ const ALL_SEARCH_PRODUCTS = [
   {
     id: "prod-coir-1",
     name: "ขุยมะพร้าวอัดแผ่นกันกระแทก (ต้านแรงกด 15 kg)",
-    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop",
+    image: "/images/products/coconut-coir.jpg",
     retailPrice: 75.0,
     storeName: "Green Living Crafts Thailand",
     soldCount: 2150,
@@ -62,7 +62,7 @@ const ALL_SEARCH_PRODUCTS = [
   {
     id: "prod-mycelium-1",
     name: "แผ่นโฟมเห็ดชีวมวลกันกระแทก (Mycelium Packaging)",
-    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&auto=format&fit=crop",
+    image: "/images/products/mycelium-foam.jpg",
     retailPrice: 89.0,
     storeName: "Green Living Crafts Thailand",
     soldCount: 540,
@@ -80,7 +80,7 @@ const ALL_SEARCH_PRODUCTS = [
   {
     id: "prod-bagasse-1",
     name: "ถาดชานอ้อยขึ้นรูปกันกระแทกสำหรับขวดแก้ว",
-    image: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&auto=format&fit=crop",
+    image: "/images/products/bagasse-tray.jpg",
     retailPrice: 65.0,
     storeName: "สวนดินดี ออร์แกนิค",
     soldCount: 1670,
@@ -98,7 +98,7 @@ const ALL_SEARCH_PRODUCTS = [
   {
     id: "prod-cornstarch-1",
     name: "โฟมแป้งข้าวโพดละลายน้ำ (Bio Peanuts)",
-    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
+    image: "/images/products/cornstarch-peanuts.jpg",
     retailPrice: 49.0,
     storeName: "Green Living Crafts Thailand",
     soldCount: 3100,
@@ -115,7 +115,7 @@ const ALL_SEARCH_PRODUCTS = [
   {
     id: "prod-banana-1",
     name: "ก้านกล้วยอบแห้งถักเกลียวกันกระแทก",
-    image: "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?w=800&auto=format&fit=crop",
+    image: "/images/products/banana-rope.jpg",
     retailPrice: 55.0,
     storeName: "สวนดินดี ออร์แกนิค",
     soldCount: 890,
@@ -133,7 +133,7 @@ const ALL_SEARCH_PRODUCTS = [
   {
     id: "prod-honeycomb-1",
     name: "กระดาษคราฟท์รังผึ้งย่อยสลายได้ (Honeycomb Paper)",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop",
+    image: "/images/products/honeycomb-paper.jpg",
     retailPrice: 69.0,
     storeName: "Green Living Crafts Thailand",
     soldCount: 2800,

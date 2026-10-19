@@ -27,8 +27,7 @@ const PRODUCTS: MockProduct[] = [
     id: "prod-hyacinth-roll",
     name: "แผ่นผักตบชวากันกระแทก (Water Hyacinth Cushion Roll)",
     category: "cushion",
-    image:
-      "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
+    image: "/images/products/hyacinth-cushion.jpg",
     retailPrice: 145,
     originalPrice: 180,
     producer: "วิสาหกิจชุมชนบางเลน",
@@ -46,8 +45,7 @@ const PRODUCTS: MockProduct[] = [
     id: "prod-cornstarch-peanuts",
     name: "เม็ดโฟมแป้งข้าวโพดย่อยสลาย ละลายน้ำ 100% (50 ลิตร)",
     category: "cushion",
-    image:
-      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
+    image: "/images/products/cornstarch-peanuts.jpg",
     retailPrice: 189,
     originalPrice: 250,
     producer: "Green BioPack Tech",
@@ -65,8 +63,7 @@ const PRODUCTS: MockProduct[] = [
     id: "prod-mushroom-foam",
     name: "โฟมขึ้นรูปจากเส้นใยเห็ด (Mushroom Packaging Foam)",
     category: "cushion",
-    image:
-      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&auto=format&fit=crop",
+    image: "/images/products/mycelium-foam.jpg",
     retailPrice: 320,
     originalPrice: 390,
     producer: "Mycelium EcoLab TH",
@@ -84,8 +81,7 @@ const PRODUCTS: MockProduct[] = [
     id: "prod-areca-palm-plates",
     name: "ชุดจานกาบหมากธรรมชาติ ทรงเหลี่ยม 8 นิ้ว (แพ็ก 25 ชิ้น)",
     category: "tableware",
-    image:
-      "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&auto=format&fit=crop",
+    image: "/images/products/bagasse-tray.jpg",
     retailPrice: 160,
     originalPrice: 200,
     producer: "วิสาหกิจกาบหมากสุราษฎร์",
@@ -624,7 +620,7 @@ export default function LandingPage() {
             <div className="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-center hover:shadow-lg transition-all duration-300">
               <div className="w-full md:w-1/2 h-64 rounded-2xl overflow-hidden relative bg-surface-container shrink-0">
                 <Image
-                  src="https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop"
+                  src="/images/products/hyacinth-cushion.jpg"
                   alt="Greeny Lives streaming demo"
                   fill
                   sizes="(max-width: 768px) 100vw, 320px"
@@ -664,7 +660,7 @@ export default function LandingPage() {
             <div className="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-center hover:shadow-lg transition-all duration-300">
               <div className="w-full md:w-1/2 h-64 rounded-2xl overflow-hidden relative bg-surface-container shrink-0">
                 <Image
-                  src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop"
+                  src="/images/reviews/rev-hyacinth-bakery.jpg"
                   alt="Eco packaging unboxing review"
                   fill
                   sizes="(max-width: 768px) 100vw, 320px"

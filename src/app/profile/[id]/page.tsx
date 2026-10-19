@@ -35,7 +35,7 @@ const SAMPLE_POSTS: ProfilePost[] = [
     caption: "หลังจากลองเปลี่ยนมาใช้ผักตบชวาแทนบับเบิ้ลพลาสติก ลูกค้าชมกันเยอะมาก แพ็กของหนาแน่น ไม่แตกหัก แถมย่อยสลายได้ในกระถางต้นไม้",
     likesCount: 1420,
     commentsCount: 86,
-    imageUrl: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&q=80",
+    imageUrl: "/images/reviews/rev-hyacinth-bakery.jpg",
     date: "2 วันที่แล้ว",
   },
   {
@@ -46,7 +46,7 @@ const SAMPLE_POSTS: ProfilePost[] = [
     caption: "โยนลงพื้นจากความสูง 1.5 เมตร ขวดแก้วปลอดภัย 100% ตัวโฟมเห็ดรับแรงกระแทกได้ดีกว่าโฟมสังเคราะห์อีกครับ",
     likesCount: 3890,
     commentsCount: 245,
-    imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80",
+    imageUrl: "/images/products/mycelium-foam.jpg",
     date: "5 วันที่แล้ว",
   },
   {
@@ -56,7 +56,7 @@ const SAMPLE_POSTS: ProfilePost[] = [
     caption: "งานฝีมือเกษตรกรไทย สะอาด ปลอดภัย ไม่มีสารเคมีปนเปื้อน เหมาะสำหรับร้านเบเกอรี่และของขวัญออร์แกนิกมาก",
     likesCount: 890,
     commentsCount: 42,
-    imageUrl: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80",
+    imageUrl: "/images/products/banana-rope.jpg",
     date: "1 สัปดาห์ที่แล้ว",
   },
   {
@@ -67,7 +67,7 @@ const SAMPLE_POSTS: ProfilePost[] = [
     caption: "ละลายน้ำใน 10 วินาที เทลงท่อระบายน้ำหรือรดน้ำต้นไม้ได้เลย ไม่เป็นมลพิษต่อสิ่งแวดล้อมแน่นอน",
     likesCount: 5210,
     commentsCount: 380,
-    imageUrl: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=600&q=80",
+    imageUrl: "/images/reviews/rev-cornstarch-dissolving.jpg",
     date: "2 สัปดาห์ที่แล้ว",
   },
   {
@@ -77,7 +77,7 @@ const SAMPLE_POSTS: ProfilePost[] = [
     caption: "เดือนนี้ร้านเราลดพลาสติกแบบใช้ครั้งเดียวไปได้ 85 กิโลกรัม เทียบเท่ากับการปลูกต้นไม้ 12 ต้น!",
     likesCount: 1650,
     commentsCount: 94,
-    imageUrl: "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=600&q=80",
+    imageUrl: "/images/products/hyacinth-cushion.jpg",
     date: "3 สัปดาห์ที่แล้ว",
   },
   {
@@ -87,7 +87,7 @@ const SAMPLE_POSTS: ProfilePost[] = [
     caption: "กระดาษรังผึ้งยืดได้ ไม่ต้องพึ่งเทปกาวพลาสติก ดึงยืดขยายแล้วล็อกตัวเองได้เลย สะดวกและประหยัดเวลามาก",
     likesCount: 2100,
     commentsCount: 112,
-    imageUrl: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80",
+    imageUrl: "/images/reviews/rev-honeycomb-gift.jpg",
     date: "1 เดือนที่แล้ว",
   },
 ];
@@ -100,7 +100,7 @@ const SAMPLE_PRODUCTS: ProfileProduct[] = [
     originalPrice: 79,
     discountPct: 25,
     soldCount: 1250,
-    imageUrl: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=300&q=80",
+    imageUrl: "/images/products/hyacinth-cushion.jpg",
   },
   {
     id: "prod-2",
@@ -109,7 +109,7 @@ const SAMPLE_PRODUCTS: ProfileProduct[] = [
     originalPrice: 60,
     discountPct: 25,
     soldCount: 890,
-    imageUrl: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=300&q=80",
+    imageUrl: "/images/products/rice-straw.jpg",
   },
   {
     id: "prod-3",
@@ -118,7 +118,7 @@ const SAMPLE_PRODUCTS: ProfileProduct[] = [
     originalPrice: 250,
     discountPct: 24,
     soldCount: 420,
-    imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=300&q=80",
+    imageUrl: "/images/products/mycelium-foam.jpg",
   },
 ];
 

@@ -8,7 +8,7 @@ const STORE_CATALOG = [
   {
     id: "prod-hyacinth-1",
     name: "ผักตบชวาอบแห้งกันกระแทก 1 กิโลกรัม",
-    image: "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
+    image: "/images/products/hyacinth-cushion.jpg",
     retailPrice: 59.0,
     storeName: "สวนดินดี ออร์แกนิค",
     soldCount: 1420,
@@ -25,7 +25,7 @@ const STORE_CATALOG = [
   {
     id: "prod-straw-1",
     name: "ฟางข้าวอัดเส้นกันกระแทกปลอดสารพิษ",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop",
+    image: "/images/products/rice-straw.jpg",
     retailPrice: 45.0,
     storeName: "สวนดินดี ออร์แกนิค",
     soldCount: 980,
@@ -43,7 +43,7 @@ const STORE_CATALOG = [
   {
     id: "prod-bagasse-1",
     name: "ถาดชานอ้อยขึ้นรูปกันกระแทกสำหรับขวดแก้ว",
-    image: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&auto=format&fit=crop",
+    image: "/images/products/bagasse-tray.jpg",
     retailPrice: 65.0,
     storeName: "สวนดินดี ออร์แกนิค",
     soldCount: 1670,
@@ -60,7 +60,7 @@ const STORE_CATALOG = [
   {
     id: "prod-banana-1",
     name: "ก้านกล้วยอบแห้งถักเกลียวกันกระแทก",
-    image: "https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?w=800&auto=format&fit=crop",
+    image: "/images/products/banana-rope.jpg",
     retailPrice: 55.0,
     storeName: "สวนดินดี ออร์แกนิค",
     soldCount: 890,

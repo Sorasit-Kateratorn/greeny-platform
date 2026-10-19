@@ -56,7 +56,7 @@ export async function GET(request: Request) {
       {
         id: "prod-hyacinth-1",
         name: "ผักตบชวาอบแห้งกันกระแทก 1 กิโลกรัม",
-        image: "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
+        image: "/images/products/hyacinth-cushion.jpg",
         retailPrice: 59.0,
         storeName: "สวนดินดี ออร์แกนิค",
         soldCount: 1420,
@@ -73,7 +73,7 @@ export async function GET(request: Request) {
       {
         id: "prod-coir-1",
         name: "ขุยมะพร้าวอัดแผ่นกันกระแทก (ต้านแรงกด 15 kg)",
-        image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop",
+        image: "/images/products/coconut-coir.jpg",
         retailPrice: 75.0,
         storeName: "Green Living Crafts Thailand",
         soldCount: 2150,
@@ -89,7 +89,7 @@ export async function GET(request: Request) {
       {
         id: "prod-mycelium-1",
         name: "แผ่นโฟมเห็ดชีวมวลกันกระแทก (Mycelium Packaging)",
-        image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&auto=format&fit=crop",
+        image: "/images/products/mycelium-foam.jpg",
         retailPrice: 89.0,
         storeName: "Green Living Crafts Thailand",
         soldCount: 540,

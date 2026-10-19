@@ -21,7 +21,7 @@ const CATALOG_PRODUCTS: CatalogProduct[] = [
     rating: 4.95,
     soldCount: 1420,
     highlight: "สะอาด ไร้ฝุ่น อบแสงอาทิตย์ ย่อยสลาย 60 วัน",
-    image: "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
+    image: "/images/products/hyacinth-cushion.jpg",
     tags: ["general", "lightweight", "hyacinth", "void-fill"],
   },
   {
@@ -32,7 +32,7 @@ const CATALOG_PRODUCTS: CatalogProduct[] = [
     rating: 4.98,
     soldCount: 2150,
     highlight: "ต้านแรงกดทับ 15 kg ผ่านการทดสอบขวดแก้วสมบูรณ์",
-    image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop",
+    image: "/images/products/coconut-coir.jpg",
     tags: ["glass", "fragile", "heavy", "15kg", "bottle", "ceramic"],
   },
   {
@@ -43,7 +43,7 @@ const CATALOG_PRODUCTS: CatalogProduct[] = [
     rating: 4.85,
     soldCount: 1670,
     highlight: "ล็อคคอขวดและก้นขวด ป้องกันการสั่นสะเทือน",
-    image: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&auto=format&fit=crop",
+    image: "/images/products/bagasse-tray.jpg",
     tags: ["bottle", "bagasse", "food", "wine", "cosmetics"],
   },
   {
@@ -54,7 +54,7 @@ const CATALOG_PRODUCTS: CatalogProduct[] = [
     rating: 4.96,
     soldCount: 3100,
     highlight: "ละลายน้ำได้ใน 1 นาที ไร้สารพิษ ปลอดภัย",
-    image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
+    image: "/images/products/cornstarch-peanuts.jpg",
     tags: ["peanut", "cornstarch", "void-fill", "soluble", "dissolvable"],
   },
   {
@@ -65,7 +65,7 @@ const CATALOG_PRODUCTS: CatalogProduct[] = [
     rating: 4.92,
     soldCount: 540,
     highlight: "โฟมชีวภาพ แข็งแรงเทียบเท่า EPS ย่อยสลาย 45 วัน",
-    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&auto=format&fit=crop",
+    image: "/images/products/mycelium-foam.jpg",
     tags: ["electronics", "mycelium", "heavy", "gadget", "appliances"],
   },
   {
@@ -76,7 +76,7 @@ const CATALOG_PRODUCTS: CatalogProduct[] = [
     rating: 4.94,
     soldCount: 2800,
     highlight: "ยืดเป็นโครงสร้างรังผึ้ง ล็อคตัวเองไม่ต้องใช้กาว",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop",
+    image: "/images/products/honeycomb-paper.jpg",
     tags: ["honeycomb", "kraft", "wrapping", "bakery", "gift"],
   },
 ];
