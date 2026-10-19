@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html class="light" lang="th">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Greeny | แพลตฟอร์มอีคอมเมิร์ซปลอดพลาสติก 100% แห่งแรกในไทย</title>
+  <meta name="description" content="ตลาดกลางพาณิชย์อิเล็กทรอนิกส์สำหรับบรรจุภัณฑ์ธรรมชาติย่อยสลายได้ ผักตบชวา ฟางข้าว เส้นใยเห็ด ชานอ้อย ทั้งขายปลีกและขายส่งราคาส่งทั่วไทย"/>
+  
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <!-- Canvas Confetti for Newsletter Celebrations -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#006e0b",
+            "on-primary": "#ffffff",
+            "primary-container": "#2eb82e",
+            "on-primary-container": "#004104",
+            "primary-fixed": "#79fe6c",
+            "primary-fixed-dim": "#5ce153",
+            "secondary": "#4d644f",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#cde7cc",
+            "on-secondary-container": "#516853",
+            "tertiary": "#b72020",
+            "on-tertiary": "#ffffff",
+            "tertiary-container": "#ff7569",
+            "on-tertiary-container": "#750008",
+            "tertiary-fixed": "#ffdad6",
+            "surface": "#effdef",
+            "surface-dim": "#d0ded1",
+            "surface-bright": "#effdef",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#e9f7ea",
+            "surface-container": "#e4f2e4",
+            "surface-container-high": "#deecdf",
+            "surface-container-highest": "#d8e6d9",
+            "on-surface": "#131e16",
+            "on-surface-variant": "#3e4a39",
+            "inverse-surface": "#27332a",
+            "inverse-on-surface": "#e7f4e7",
+            "outline": "#6e7b68",
+            "outline-variant": "#bdcbb5",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+          },
+          fontFamily: {
+            display: ["Plus Jakarta Sans", "sans-serif"],
+            body: ["Be Vietnam Pro", "sans-serif"],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Be Vietnam Pro', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+  
+  <!-- ================= HEADER ================= -->
+  <header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(20,41,24,0.05)] border-b border-outline-variant/30">
+    <div class="h-20 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-6">
+        <a class="flex items-center gap-2 group" href="#">
+          <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm group-hover:bg-primary group-hover:text-on-primary transition-colors">
+            <span class="material-symbols-outlined text-[24px]">eco</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-xl text-on-surface tracking-tight leading-none group-hover:text-primary transition-colors">Greeny</span>
+            <span class="font-display font-bold text-[10px] text-primary uppercase tracking-wider">Eco-Market</span>
+          </div>
+        </a>
+
+        <nav class="hidden xl:flex items-center gap-1.5 text-xs font-bold">
+          <a class="bg-secondary-container text-on-secondary-container rounded-full px-3.5 py-1.5 transition-colors" href="#">หน้าแรก</a>
+          <a class="px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors" href="#products">ช้อปสินค้า</a>
+          <a class="px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors" href="#ecosystem">Greeny Lives</a>
+          <a class="px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors" href="#ecosystem">Greeny Review</a>
+          <a class="px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors" href="#b2b">Creator Studio</a>
+          <a class="px-3.5 py-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-full transition-colors" href="#b2b">สำหรับผู้ขาย Seller Center</a>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-bold transition-colors" type="button">
+          <span class="material-symbols-outlined text-[16px] text-primary">language</span>
+          <span>TH | THB</span>
+        </button>
+        <button onclick="openB2BModal()" class="hidden sm:inline-flex items-center px-4 py-2 font-display font-bold text-xs text-on-surface hover:text-primary transition-colors">
+          เข้าสู่ระบบ
+        </button>
+        <button onclick="openB2BModal()" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary-container text-on-primary-container font-display font-bold text-xs hover:bg-primary hover:text-on-primary shadow-sm hover:shadow-md transition-all">
+          สมัครสมาชิก
+        </button>
+        <div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="w-full pt-20">
+
+    <!-- Toast Notification Container -->
+    <aside id="toastBox" role="status" aria-live="polite" class="hidden fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 border border-outline-variant/40 animate-bounce">
+      <span class="material-symbols-outlined text-primary-fixed text-[22px]">check_circle</span>
+      <span id="toastMsg" class="text-xs sm:text-sm font-medium">เพิ่มสินค้าลงรถเข็นแล้ว!</span>
+    </aside>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="relative w-full overflow-hidden bg-gradient-to-b from-surface via-surface-container-lowest/60 to-surface-container-low pt-8 pb-16 lg:py-24 border-b border-outline-variant/20">
+      <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary-fixed/20 blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-secondary-container/40 blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Left Hero Content -->
+          <div class="lg:col-span-7 flex flex-col items-start gap-4 sm:gap-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-container/80 text-on-secondary-container shadow-sm border border-outline-variant/30">
+              <span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+              <span class="font-display font-bold text-xs sm:text-sm tracking-tight">🌱 แพลตฟอร์มอีคอมเมิร์ซปลอดพลาสติก 100% แห่งแรกในไทย</span>
+            </div>
+
+            <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-6xl text-on-surface tracking-tight leading-[1.15]">
+              ช้อปเพื่อโลกที่ยั่งยืน <br/>
+              <span class="text-primary font-display">เริ่มต้นที่ Greeny</span>
+            </h1>
+
+            <p class="font-body text-sm sm:text-base lg:text-lg text-on-surface-variant max-w-2xl leading-relaxed">
+              รวมสินค้าเกษตรอินทรีย์ บรรจุภัณฑ์ย่อยสลายได้ทางชีวภาพจากวิสาหกิจชุมชนไทย พร้อมระบบคำนวณและชดเชยคาร์บอน (Carbon Offset) ทุกคำสั่งซื้อ จัดส่งด้วยรถพลังงานไฟฟ้า EV ถึงมือคุณ
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
+              <a href="#products" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-display font-bold text-sm sm:text-base shadow-md hover:shadow-xl transition-all duration-200 group">
+                <span>สำรวจสินค้าเพื่อโลก</span>
+                <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+              <button onclick="openB2BModal()" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-surface-container-lowest text-on-surface hover:text-primary hover:bg-surface-container font-display font-bold text-sm sm:text-base shadow-xs border border-outline-variant/40 transition-all duration-200">
+                <span class="material-symbols-outlined text-primary text-[20px]">storefront</span>
+                <span>สมัครเปิดร้านค้าสีเขียว</span>
+              </button>
+            </div>
+
+            <div class="flex items-center gap-2 text-on-surface-variant text-xs sm:text-sm pt-1">
+              <span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+              <span>มาตรฐานรับรอง Biodegradable ASTM D6400 &amp; สัญลักษณ์คาร์บอนฟุตพริ้นท์</span>
+            </div>
+          </div>
+
+          <!-- Right Visual Showcase / Dynamic Collage -->
+          <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+            <div class="relative w-full rounded-3xl bg-surface-container-lowest p-4 sm:p-5 shadow-2xl border border-outline-variant/30">
+              <div class="relative w-full h-72 sm:h-84 rounded-2xl overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" alt="Natural eco packaging products arrangement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEMsu1MuZZpHPDqSasRNb_1qmrKYbUlVO-UGVcN6OQzBLMBbrhG9OmakpE0ymx2muHOEBT3wzcBoBKN84tM31zR6aAlryf6_hhSXdLoJdOm5hKSvFY9WMFa-6RF0fnJ1Sf39RHjQv526b2iJNhaKeR3FV9tZ9qok_khUbnl64eLunVrnYj44Scq11iP4tZ9_TOUu1Z5jO5VLwz11LWROlajd0m1i3oQJNWnxSuh48no_Bl2WxdfvXc"/>
+                <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-primary text-on-primary text-xs font-bold shadow-md flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px]">compost</span>
+                  <span>100% Compostable</span>
+                </div>
+                <div class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface text-xs font-bold shadow-sm flex items-center gap-1.5 border border-outline-variant/30">
+                  <span class="material-symbols-outlined text-primary text-[16px]">electric_bolt</span>
+                  <span>ส่งด่วน EV Express</span>
+                </div>
+              </div>
+
+              <!-- Live Carbon Tracker Badge -->
+              <div class="absolute -bottom-6 -left-4 sm:-left-6 bg-surface-container-lowest p-3.5 sm:p-4 rounded-2xl shadow-xl flex items-center gap-3.5 max-w-xs border border-outline-variant/30 backdrop-blur-md">
+                <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container shrink-0 shadow-sm">
+                  <span class="material-symbols-outlined text-[24px]">co2</span>
+                </div>
+                <div class="flex flex-col text-left">
+                  <span class="text-[10px] text-on-surface-variant font-bold uppercase tracking-wider">คำสั่งซื้อล่าสุดช่วยลด</span>
+                  <span class="font-display font-extrabold text-base sm:text-lg text-primary">-2.84 kg CO2e</span>
+                  <span class="text-[11px] text-on-surface-variant">เทียบเท่าปลูกต้นไม้ 1 ต้น 🌳</span>
+                </div>
+              </div>
+
+              <!-- Zero Plastic Ribbon -->
+              <div class="absolute -top-3 -right-3 bg-tertiary-container text-on-tertiary-container font-display font-extrabold text-xs px-3.5 py-1.5 rounded-2xl shadow-md flex items-center gap-1.5 transform rotate-2 border border-tertiary/20">
+                <span class="material-symbols-outlined text-[16px]">block</span>
+                <span>Zero-Single-Use Plastic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Metrics Strip -->
+        <div class="mt-14 pt-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6 bg-surface-container-lowest rounded-3xl p-5 sm:p-8 shadow-sm border border-outline-variant/30">
+            <div class="flex flex-col gap-1 items-start pl-2">
+              <div class="flex items-center gap-1.5 text-primary">
+                <span class="material-symbols-outlined text-[24px]">nest_eco_leaf</span>
+                <span class="font-display font-extrabold text-2xl sm:text-3xl text-on-surface tracking-tight">1,480,250</span>
+              </div>
+              <span class="font-display font-bold text-xs sm:text-sm text-primary">kg CO2e</span>
+              <p class="text-xs text-on-surface-variant">คาร์บอนที่ช่วยลดสะสมทั้งแพลตฟอร์ม</p>
+            </div>
+
+            <div class="flex flex-col gap-1 items-start pl-2">
+              <div class="flex items-center gap-1.5 text-primary">
+                <span class="material-symbols-outlined text-[24px]">local_shipping</span>
+                <span class="font-display font-extrabold text-2xl sm:text-3xl text-on-surface tracking-tight">50,000+</span>
+              </div>
+              <span class="font-display font-bold text-xs sm:text-sm text-primary">คำสั่งซื้อ EV</span>
+              <p class="text-xs text-on-surface-variant">ส่งด้วยรถขนส่งพลังงานไฟฟ้า 100%</p>
+            </div>
+
+            <div class="flex flex-col gap-1 items-start pl-2">
+              <div class="flex items-center gap-1.5 text-primary">
+                <span class="material-symbols-outlined text-[24px]">groups</span>
+                <span class="font-display font-extrabold text-2xl sm:text-3xl text-on-surface tracking-tight">2,500+</span>
+              </div>
+              <span class="font-display font-bold text-xs sm:text-sm text-primary">วิสาหกิจชุมชน</span>
+              <p class="text-xs text-on-surface-variant">เกษตรกรไทยผ่านการตรวจรับรอง Eco</p>
+            </div>
+
+            <div class="flex flex-col gap-1 items-start pl-2">
+              <div class="flex items-center gap-1.5 text-primary">
+                <span class="material-symbols-outlined text-[24px]">recycling</span>
+                <span class="font-display font-extrabold text-2xl sm:text-3xl text-on-surface tracking-tight">100%</span>
+              </div>
+              <span class="font-display font-bold text-xs sm:text-sm text-primary">Plastic Neutral</span>
+              <p class="text-xs text-on-surface-variant">บรรจุภัณฑ์ไร้พลาสติกใช้ครั้งเดียว</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE CARBON OFFSET CALCULATOR -->
+    <section class="w-full py-12 lg:py-16 bg-surface border-b border-outline-variant/20">
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="bg-gradient-to-r from-secondary-container/50 via-surface-container to-secondary-container/40 rounded-3xl p-6 sm:p-10 border border-outline-variant/30 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="flex flex-col gap-2 max-w-xl">
+            <div class="inline-flex items-center gap-2 text-primary font-display font-bold text-xs uppercase tracking-wider">
+              <span class="material-symbols-outlined text-[18px]">calculate</span>
+              <span>Green Impact Calculator (สำหรับร้านค้า &amp; ผู้ซื้อ)</span>
+            </div>
+            <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-on-surface tracking-tight">
+              จำลองผลกระทบเชิงบวกต่อสิ่งแวดล้อมของคุณ
+            </h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+              เลื่อนแถบเพื่อดูว่า หากร้านค้าหรือครัวเรือนของคุณเปลี่ยนมาใช้บรรจุภัณฑ์ย่อยสลายได้ของ Greeny จะช่วยลดคาร์บอนและขยะพลาสติกได้มากเพียงใดในแต่ละเดือน
+            </p>
+
+            <!-- Slider Controller -->
+            <div class="mt-4 pt-2">
+              <div class="flex justify-between items-center text-xs font-bold text-on-surface mb-2">
+                <span>ปริมาณพัสดุ / ออเดอร์ต่อเดือน:</span>
+                <span id="sliderBadge" class="px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-display text-sm font-extrabold">
+                  120 กล่อง/เดือน
+                </span>
+              </div>
+              <input id="impactSlider" type="range" min="10" max="1000" step="10" value="120" class="w-full h-2.5 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary"/>
+              <div class="flex justify-between text-[11px] text-outline mt-1 font-medium">
+                <span>10 กล่อง (ร้านขนาดเล็ก)</span>
+                <span>500 กล่อง (ร้านค้ากำลังโต)</span>
+                <span>1,000+ กล่อง (ธุรกิจ SME)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Impact Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5 w-full lg:w-auto shrink-0">
+            <div class="bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/30 shadow-xs flex flex-col items-center text-center">
+              <div class="w-10 h-10 rounded-xl bg-primary-container/20 text-primary flex items-center justify-center mb-2">
+                <span class="material-symbols-outlined text-[22px]">cloud_off</span>
+              </div>
+              <span id="co2Val" class="font-display font-extrabold text-xl sm:text-2xl text-primary">-54.0 kg</span>
+              <span class="text-[11px] text-on-surface-variant font-medium">CO2e คาร์บอนที่ลดได้</span>
+            </div>
+
+            <div class="bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/30 shadow-xs flex flex-col items-center text-center">
+              <div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center mb-2">
+                <span class="material-symbols-outlined text-[22px]">delete_sweep</span>
+              </div>
+              <span id="plasticVal" class="font-display font-extrabold text-xl sm:text-2xl text-tertiary">-384 ชิ้น</span>
+              <span class="text-[11px] text-on-surface-variant font-medium">ขยะพลาสติกที่หมดไป</span>
+            </div>
+
+            <div class="bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant/30 shadow-xs flex flex-col items-center text-center">
+              <div class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-2">
+                <span class="material-symbols-outlined text-[22px]">park</span>
+              </div>
+              <span id="treeVal" class="font-display font-extrabold text-xl sm:text-2xl text-on-secondary-container">9.6 ต้น</span>
+              <span class="text-[11px] text-on-surface-variant font-medium">เทียบเท่าปลูกต้นไม้</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CORE VALUE PROPOSITIONS -->
+    <section class="w-full py-16 lg:py-24 bg-surface border-b border-outline-variant/20">
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+          <div class="flex flex-col gap-2 max-w-xl">
+            <span class="font-display font-bold text-xs sm:text-sm text-primary uppercase tracking-wider">Greeny Standard of Excellence</span>
+            <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-on-surface tracking-tight">ทำไมต้องเลือก Greeny?</h2>
+            <p class="text-xs sm:text-sm text-on-surface-variant">มาตรฐานที่ผสานความสะดวกสบายของการช้อปปิ้งออนไลน์ เข้ากับความรับผิดชอบต่อสิ่งแวดล้อมอย่างแท้จริง</p>
+          </div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-display font-bold text-xs border border-outline-variant/20">มาตรฐานตรวจสอบ 5 ระดับ</span>
+            <span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-display font-bold text-xs border border-outline-variant/20">Eco-Pass การันตี</span>
+          </div>
+        </div>
+
+        <!-- 4 Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="flex flex-col justify-between p-6 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-variant/30 group">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[30px] text-primary">eco</span>
+              </div>
+              <div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-display font-bold text-[11px] mb-2.5">ย่อยสลายได้ใน 90 วัน</div>
+              <h3 class="font-display font-extrabold text-lg sm:text-xl text-on-surface mb-2">100% Bio-Degradable</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                วัสดุทำจากพืชธรรมชาติ เช่น ผักตบชวา ชานอ้อย และแป้งมันสำปะหลัง ไร้สารเคลือบไมโครพลาสติก คืนสารอาหารให้ดินอย่างปลอดภัย
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center gap-1 text-primary font-display font-bold text-xs">
+              <span>ดูผลแล็บทดสอบ ASTM</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-between p-6 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-variant/30 group">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[30px] text-primary">electric_car</span>
+              </div>
+              <div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-display font-bold text-[11px] mb-2.5">EV Fleet Logistics</div>
+              <h3 class="font-display font-extrabold text-lg sm:text-xl text-on-surface mb-2">Green Delivery Partner</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                จัดส่งพัสดุด้วยรถขนส่งไฟฟ้า ลดควันพิษ PM2.5 และใช้เทปกระดาษกาวน้ำ (Water-Activated Tape) ไร้เทปพลาสติก แกะรีไซเคิลได้ทันที
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center gap-1 text-primary font-display font-bold text-xs">
+              <span>เส้นทางขนส่งสีเขียว</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-between p-6 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-variant/30 group">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[30px] text-primary">agriculture</span>
+              </div>
+              <div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-display font-bold text-[11px] mb-2.5">Fair Trade 100%</div>
+              <h3 class="font-display font-extrabold text-lg sm:text-xl text-on-surface mb-2">Direct from Thai Farmers</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                เชื่อมตรงกับกลุ่มเกษตรกรและช่างฝีมือชุมชนกว่า 77 จังหวัด สร้างรายได้คืนสู่รากหญ้าโดยไม่ผ่านคนกลางหลายต่อ ราคาเป็นธรรม
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center gap-1 text-primary font-display font-bold text-xs">
+              <span>ทำความรู้จักเกษตรกร</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-between p-6 rounded-3xl bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all duration-300 border border-outline-variant/30 group">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[30px] text-primary">loyalty</span>
+              </div>
+              <div class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container text-primary font-display font-bold text-[11px] mb-2.5">Green Points &amp; Offset</div>
+              <h3 class="font-display font-extrabold text-lg sm:text-xl text-on-surface mb-2">Eco-Rewards &amp; Credits</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                ทุกคำสั่งซื้อและรีวิวการลดขยะ เปลี่ยนเป็นคะแนน Green Points แลกส่วนลดเงินสด และแปลงเป็นเหรียญสนับสนุนโครงการปลูกป่าชุมชน
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center gap-1 text-primary font-display font-bold text-xs">
+              <span>ระบบแต้มและปลูกป่า</span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: GREENY ECOSYSTEM EXPERIENCES -->
+    <section id="ecosystem" class="w-full py-16 lg:py-24 bg-surface-container-low border-b border-outline-variant/20">
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="font-display font-bold text-xs sm:text-sm text-primary uppercase tracking-wider">Integrated Commerce &amp; Community</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-on-surface tracking-tight mt-1">
+            ระบบนิเวศการช้อปปิ้งเพื่อโลกที่ครบวงจร
+          </h2>
+          <p class="text-xs sm:text-sm text-on-surface-variant mt-2">
+            ไม่เพียงแค่ซื้อขาย แต่คือพื้นที่แห่งการเรียนรู้ แบ่งปันไลฟ์สไตล์ และขับเคลื่อนเศรษฐกิจหมุนเวียน (Circular Economy) ไปด้วยกัน
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Feature 1: Greeny Lives -->
+          <div class="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-center hover:shadow-lg transition-all duration-300">
+            <div class="w-full md:w-1/2 h-64 rounded-2xl overflow-hidden relative bg-surface-container shrink-0">
+              <img class="w-full h-full object-cover" alt="Thai organic farmer live streaming" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaZkDMHQ0mrir2yA6Yv9tb0iPgkZbCppWAwbySIQrXzNh9Os7kOjJcLilJBsX1BUqdWz6Ph3Sx0_LHRovZg-51JvmXj4WzWW8XL_uL5zl0sQ9xUx0R3bmJIfkGg02Mkyz2dgOSH5nBPUqaXw8LQvZWG9btup3O_D7QGMPv9ueCOZMCntKWGx-f3j6zZqk9kY4CN1QwrCCXKR3opN1g2vS90VgZYEjrPYHqpRP2G6YPpgVYdCKmT1LU"/>
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-error text-on-error font-display font-bold text-xs flex items-center gap-1.5 shadow-md">
+                <span class="w-2 h-2 rounded-full bg-surface-container-lowest animate-ping"></span>
+                <span>LIVE</span>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 px-3 py-2 rounded-xl bg-on-surface/80 backdrop-blur-md text-on-primary flex items-center justify-between text-xs font-bold">
+                <span>ผู้ชม 1,420 คน</span>
+                <span class="text-primary-fixed">แจกโค้ด -20%</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2.5">
+              <div class="flex items-center gap-1.5 text-primary">
+                <span class="material-symbols-outlined text-[20px]">videocam</span>
+                <span class="font-display font-bold text-xs uppercase">Live Commerce</span>
+              </div>
+              <h3 class="font-display font-extrabold text-lg sm:text-xl text-on-surface">Greeny Lives ช้อปสดกับผู้ผลิต</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                พบกับเกษตรกรและผู้ผลิตตัวจริง สาธิตการทดสอบการย่อยสลาย ความแข็งแรงของบรรจุภัณฑ์ชานอ้อย และเคล็ดลับการปลูกแบบอินทรีย์ ช้อปได้ทันทีขณะชมไลฟ์
+              </p>
+              <a href="#products" class="inline-flex items-center gap-1 text-primary font-display font-bold text-xs sm:text-sm mt-1 hover:underline">
+                <span>เข้าห้องชมไลฟ์ตอนนี้</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Feature 2: Greeny Review (UGC) -->
+          <div class="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-center hover:shadow-lg transition-all duration-300">
+            <div class="w-full md:w-1/2 h-64 rounded-2xl overflow-hidden relative bg-surface-container shrink-0">
+              <img class="w-full h-full object-cover" alt="Eco unboxing review" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr4Ew9_eZ-24C-wD74djj8KJF6r5qe5BcYg_PqmQhKyYYCBTKVjM62cZFJAwZLw7f_CW7xI6FMIcziw9AwMOWB2rSAqqBuv95-Rx7Hjx0YNQ8Wel1FyODz177_nt6T2N4C09QbvHffFfGZ_jWR7kJMp0zVx9V5cW9I6-rDrMZT-ZQP08FiE2fvYkxXoZXVi6ElF7t_5B0S6T_4dXMmsDVG5kQtiXcoroTHeS2Rl26kCq-z_7WlQ92B"/>
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-display font-bold text-xs flex items-center gap-1 shadow-sm">
+                <span class="material-symbols-outlined text-[14px]">reviews</span>
+                <span>รีวิวจริง 100%</span>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 px-3 py-2 rounded-xl bg-on-surface/80 backdrop-blur-md text-on-primary flex items-center justify-between text-xs font-bold">
+                <span>★ 4.9 (18,400+ รีวิว)</span>
+                <span class="text-primary-fixed">+50 แต้มต่อโพสต์</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2.5">
+              <div class="flex items-center gap-1.5 text-primary">
+                <span class="material-symbols-outlined text-[20px]">rate_review</span>
+                <span class="font-display font-bold text-xs uppercase">Community UGC</span>
+              </div>
+              <h3 class="font-display font-extrabold text-lg sm:text-xl text-on-surface">Greeny Review ชุมชนคนรักษ์โลก</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                พื้นที่รวมรีวิวแกะกล่องพัสดุเขียวจากผู้ใช้จริง ร่วมแชร์วิดีโอทดสอบการละลายน้ำของโฟมข้าวโพด แลกเปลี่ยนไอเดียการจัดการขยะในบ้าน รับ Green Points ทันที
+              </p>
+              <a href="#products" class="inline-flex items-center gap-1 text-primary font-display font-bold text-xs sm:text-sm mt-1 hover:underline">
+                <span>สำรวจรีวิวของเพื่อนสมาชิก</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Feature 3: Interactive Greeny Chat AI -->
+          <div class="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-center hover:shadow-lg transition-all duration-300">
+            <div class="w-full md:w-1/2 min-h-64 rounded-2xl overflow-hidden relative bg-surface-container shrink-0 p-4 flex flex-col justify-between border border-outline-variant/20">
+              <div class="flex items-center justify-between border-b border-outline-variant/20 pb-2">
+                <div class="flex items-center gap-2">
+                  <div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[18px]">smart_toy</span>
+                  </div>
+                  <div>
+                    <div class="font-display font-bold text-xs text-on-surface">Greeny AI Advisor</div>
+                    <div class="text-[10px] text-primary font-medium">ออนไลน์พร้อมคำนวณ</div>
+                  </div>
+                </div>
+                <span id="aiBadge" class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-bold text-[10px]">ลดขยะพลาสติก 100%</span>
+              </div>
+
+              <div class="space-y-2.5 my-3">
+                <div id="aiQ" class="p-2.5 rounded-xl bg-surface-container-high text-on-surface text-xs leading-relaxed max-w-[90%] shadow-2xs">
+                  💬 "ต้องการส่งเซรามิก 500 กรัม ควรใช้วัสดุกันกระแทกแบบใด?"
+                </div>
+                <div id="aiA" class="p-2.5 rounded-xl bg-primary text-on-primary text-xs leading-relaxed max-w-[95%] ml-auto shadow-xs">
+                  🌱 แนะนำ 'แผ่นรวงผึ้งกระดาษคราฟท์' ร่วมกับ 'เม็ดโฟมแป้งข้าวโพด' ย่อยสลายได้ทันทีในน้ำ รองรับแรงกดทับได้สูงสุด 15 กก. ไร้รอยขีดข่วนครับ
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between gap-1 pt-2 border-t border-outline-variant/20">
+                <div class="flex gap-1.5">
+                  <button onclick="switchAiTab(0)" id="aiBtn0" class="w-6 h-6 rounded-full text-[11px] font-bold bg-primary text-on-primary transition-all">1</button>
+                  <button onclick="switchAiTab(1)" id="aiBtn1" class="w-6 h-6 rounded-full text-[11px] font-bold bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-lowest transition-all">2</button>
+                  <button onclick="switchAiTab(2)" id="aiBtn2" class="w-6 h-6 rounded-full text-[11px] font-bold bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-lowest transition-all">3</button>
+                </div>
+                <span class="text-[10px] text-on-surface-variant font-medium">คลิกเปลี่ยนคำถามตัวอย่าง</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col gap-2.5">
+              <div class="flex items-center gap-1.5 text-primary">
+                <span class="material-symbols-outlined text-[20px]">psychology</span>
+                <span class="font-display font-bold text-xs uppercase">Intelligent Material Match</span>
+              </div>
+              <h3 class="font-display font-extrabold text-lg sm:text-xl text-on-surface">Greeny Chat AI ผู้ช่วยสเปกบรรจุภัณฑ์</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                ปัญญาประดิษฐ์อัจฉริยะที่ช่วยคำนวณขนาดกล่องพัสดุ แนะนำวัสดุทดแทนพลาสติกตามน้ำหนักสินค้า และประเมินค่าลดคาร์บอน (Carbon Reduction Estimator) ได้แม่นยำ
+              </p>
+              <a href="#ai-demo" onclick="switchAiTab(1)" class="inline-flex items-center gap-1 text-primary font-display font-bold text-xs sm:text-sm mt-1 hover:underline">
+                <span>ทดลองปรึกษา Greeny AI ฟรี</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Feature 4: Creator & Seller Studio -->
+          <div class="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-center hover:shadow-lg transition-all duration-300">
+            <div class="w-full md:w-1/2 h-64 rounded-2xl overflow-hidden relative bg-surface-container shrink-0">
+              <img class="w-full h-full object-cover" alt="B2B Wholesale Hub" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8gyCMPCg79-33utV_YSU74fpbrWgdovdWiwYVWiUj9l6g2SQ8wdq7JvFCHA_YueizdH2q_5JqSLUx9wBUP0WnDUrfXHj05Jy04xEPDYzoM1ObL_QdBex2ed13iqO0dqgLFQjWiEyWzkcLUtEcV-ppreYsPYwn8_JM5gE6-NB6irsqv4fR_WSSGOnKzoI54k5dJYfDQhqKfQl8g94TA0u6Snrzcr_BnOlT-0cvovN3b6chqU74yama"/>
+              <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-secondary text-on-secondary font-display font-bold text-xs flex items-center gap-1 shadow-md">
+                <span class="material-symbols-outlined text-[14px]">store</span>
+                <span>B2B Wholesale Hub</span>
+              </div>
+              <div class="absolute bottom-3 left-3 right-3 px-3 py-2 rounded-xl bg-on-surface/80 backdrop-blur-md text-on-primary flex items-center justify-between text-xs font-bold">
+                <span>สั่งขั้นต่ำ 50 ชิ้น</span>
+                <span class="text-primary-fixed">ราคาส่งโรงงาน</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2.5">
+              <div class="flex items-center gap-1.5 text-primary">
+                <span class="material-symbols-outlined text-[20px]">handshake</span>
+                <span class="font-display font-bold text-xs uppercase">Affiliate &amp; Wholesale</span>
+              </div>
+              <h3 class="font-display font-extrabold text-lg sm:text-xl text-on-surface">Creator &amp; Seller Center</h3>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                สตูดิโอจัดการร้านค้าที่ครบครันสำหรับผู้ประกอบการ สั่งซื้อวัตถุดิบและบรรจุภัณฑ์ราคาส่ง พร้อมระบบ Affiliate สร้างรายได้สำหรับครีเอเตอร์สายรักษ์โลก
+              </p>
+              <button onclick="openB2BModal()" class="inline-flex items-center gap-1 text-primary font-display font-bold text-xs sm:text-sm mt-1 hover:underline">
+                <span>เข้าสู่ศูนย์บริการผู้ขาย B2B</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: TRENDING ECO-INNOVATIONS & BEST SELLERS -->
+    <section id="products" class="w-full py-16 lg:py-24 bg-surface border-b border-outline-variant/20">
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div>
+            <div class="flex items-center gap-2 text-primary font-display font-bold text-xs sm:text-sm uppercase mb-1">
+              <span class="material-symbols-outlined text-[18px]">trending_up</span>
+              <span>นวัตกรรมขายดีประจำสัปดาห์</span>
+            </div>
+            <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-on-surface tracking-tight">สินค้ารักษ์โลกยอดนิยม</h2>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap items-center gap-2">
+            <button onclick="filterCategory('all')" id="tab-all" class="px-4 py-2 rounded-full font-display font-bold text-xs sm:text-sm transition-all bg-on-surface text-surface shadow-sm">ทั้งหมด</button>
+            <button onclick="filterCategory('cushion')" id="tab-cushion" class="px-4 py-2 rounded-full font-display font-bold text-xs sm:text-sm transition-all bg-surface-container text-on-surface-variant hover:text-on-surface">กันกระแทกชีวภาพ</button>
+            <button onclick="filterCategory('tableware')" id="tab-tableware" class="px-4 py-2 rounded-full font-display font-bold text-xs sm:text-sm transition-all bg-surface-container text-on-surface-variant hover:text-on-surface">ภาชนะชานอ้อย/กาบหมาก</button>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Product 1 -->
+          <div data-cat="cushion" class="prod-card bg-surface-container-lowest rounded-3xl p-4 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between border border-outline-variant/30 group">
+            <div>
+              <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-surface-container mb-4">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="แผ่นผักตบชวากันกระแทก" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3P-hGlXlfWv-VzeBkTpzSRv9rYBRMsIr9tM1dKBHfUqHzkhW1kvR3EF0_O5PioLtQrZX6IAtTHDFTNO57Fa51v6azcRJK9yBOZkHWaV_VAeznV6nLYM5iu9FdInmqquIpgH0QDGa4OWKWfRkOE_-s-3Zn3g2B2OISSviDbTDlwz1nsLEfxVWz0qiRngZMnQfYIzHaorlB9gE4Ud3JGutXRlaj523CRumAhg3T0wVwYSd-k-hK82Za"/>
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-display font-bold text-[10px] shadow-sm">ลดขยะแหล่งน้ำ</span>
+                <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur flex items-center justify-center text-on-surface hover:text-error transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+
+              <div class="flex items-center gap-1.5 text-on-surface-variant text-xs mb-1.5">
+                <span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+                <span class="font-medium">วิสาหกิจชุมชนบางเลน</span>
+              </div>
+
+              <h3 class="font-display font-bold text-sm text-on-surface line-clamp-2 mb-2 group-hover:text-primary transition-colors">
+                แผ่นผักตบชวากันกระแทก (Water Hyacinth Cushion Roll)
+              </h3>
+
+              <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-display font-bold text-[10px] mb-3">
+                <span class="material-symbols-outlined text-[14px] text-primary">co2</span>
+                <span>-1.20 kg CO2e / ม้วน</span>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between mt-2">
+              <div>
+                <div class="font-display font-extrabold text-base sm:text-lg text-on-surface flex items-center gap-1.5">
+                  <span>฿145</span>
+                  <span class="text-xs text-on-surface-variant line-through font-normal">฿180</span>
+                </div>
+                <div class="text-[11px] text-on-surface-variant font-medium">★ 4.9 (540 รีวิว)</div>
+              </div>
+              <button onclick="showToast('เพิ่ม แผ่นผักตบชวากันกระแทก ลงรถเข็นแล้ว!')" class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary flex items-center justify-center transition-all shadow-sm active:scale-95">
+                <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div data-cat="cushion" class="prod-card bg-surface-container-lowest rounded-3xl p-4 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between border border-outline-variant/30 group">
+            <div>
+              <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-surface-container mb-4">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="เม็ดโฟมแป้งข้าวโพดย่อยสลาย" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4pXYPJOTpwCFjnzdOh-OAxQt68ZxC5ZHLu6mJJN0Wn4Fn8VfJ1wJ0mB5WOfKupSDAFHaVVtmK3sgVjk-1_qHnmfhVhrqChxrU0L5mcoLQHRtR0n8c7nmo9qQpJkoOqcoL6oX-IRdXIHr8LOw5YfHA-c3er_94DibTZGxAlh1Y4U0RZ4qxVHaoKYG003Kwcv7gilU9UE4TNKk9RdqklrGObIyd3OEvnXwKTbjGiBzbWhk0IWMKuU6L"/>
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-display font-bold text-[10px] shadow-sm">-25% Flash</span>
+                <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur flex items-center justify-center text-on-surface hover:text-error transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+
+              <div class="flex items-center gap-1.5 text-on-surface-variant text-xs mb-1.5">
+                <span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+                <span class="font-medium">Green BioPack Tech</span>
+              </div>
+
+              <h3 class="font-display font-bold text-sm text-on-surface line-clamp-2 mb-2 group-hover:text-primary transition-colors">
+                เม็ดโฟมแป้งข้าวโพดย่อยสลาย ละลายน้ำ 100% (50 ลิตร)
+              </h3>
+
+              <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-display font-bold text-[10px] mb-3">
+                <span class="material-symbols-outlined text-[14px] text-primary">water_drop</span>
+                <span>ละลายน้ำใน 10 วินาที</span>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between mt-2">
+              <div>
+                <div class="font-display font-extrabold text-base sm:text-lg text-on-surface flex items-center gap-1.5">
+                  <span>฿189</span>
+                  <span class="text-xs text-on-surface-variant line-through font-normal">฿250</span>
+                </div>
+                <div class="text-[11px] text-on-surface-variant font-medium">★ 4.95 (1.2k รีวิว)</div>
+              </div>
+              <button onclick="showToast('เพิ่ม เม็ดโฟมแป้งข้าวโพด ละลายน้ำ 100% ลงรถเข็นแล้ว!')" class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary flex items-center justify-center transition-all shadow-sm active:scale-95">
+                <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div data-cat="cushion" class="prod-card bg-surface-container-lowest rounded-3xl p-4 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between border border-outline-variant/30 group">
+            <div>
+              <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-surface-container mb-4">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="โฟมขึ้นรูปจากเส้นใยเห็ด" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL284C05ltxwGFmnlGygHSZWhut1bEE1N9rPe4BSSL9uuwnjWHzF2JONdfWsb6DOVKwSlAZ8KBG7BfH8h6t7z5qUn3Uj7wNqf1tko560K6WC8i0F3KzNgslkXSKeMKrwFfpPUtI5O70nh4z5CItoZudmyAQIgQvNTmONSRQqLM8IdE6pEyfdh3UBXSj2yV_N3f0RJUAlL6oGuIGAgQ7sPLtp6Od2-W0bdZAzrQfchRZD_9l4Shw31H"/>
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-primary-container text-on-primary-container font-display font-bold text-[10px] shadow-sm">นวัตกรรมเห็ด</span>
+                <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur flex items-center justify-center text-on-surface hover:text-error transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+
+              <div class="flex items-center gap-1.5 text-on-surface-variant text-xs mb-1.5">
+                <span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+                <span class="font-medium">Mycelium EcoLab TH</span>
+              </div>
+
+              <h3 class="font-display font-bold text-sm text-on-surface line-clamp-2 mb-2 group-hover:text-primary transition-colors">
+                โฟมขึ้นรูปจากเส้นใยเห็ด (Mushroom Packaging Foam)
+              </h3>
+
+              <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-display font-bold text-[10px] mb-3">
+                <span class="material-symbols-outlined text-[14px] text-primary">forest</span>
+                <span>ทนความร้อน ไม่อับชื้น</span>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between mt-2">
+              <div>
+                <div class="font-display font-extrabold text-base sm:text-lg text-on-surface flex items-center gap-1.5">
+                  <span>฿320</span>
+                  <span class="text-xs text-on-surface-variant line-through font-normal">฿390</span>
+                </div>
+                <div class="text-[11px] text-on-surface-variant font-medium">★ 4.88 (310 รีวิว)</div>
+              </div>
+              <button onclick="showToast('เพิ่ม โฟมขึ้นรูปจากเส้นใยเห็ด ลงรถเข็นแล้ว!')" class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary flex items-center justify-center transition-all shadow-sm active:scale-95">
+                <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div data-cat="tableware" class="prod-card bg-surface-container-lowest rounded-3xl p-4 shadow-sm hover:shadow-2xl transition-all duration-300 flex flex-col justify-between border border-outline-variant/30 group">
+            <div>
+              <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-surface-container mb-4">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt="ชุดจานกาบหมากธรรมชาติ" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZsOqNQCce8JUsPohlfL0bRLaiTwiqE8edw8vcYpfmX0YfFuI_2K1roofpdVLgXkWqaStAzklLdZZvNIDM6U1eqjoEjv-PG5q_dfG-Qy0dik9xE59NIHA_6XvhPxpfY0e4PLIE38gF2Eo3YGWdwOQsfQFCNme6REYl3kGMouoJYIbTiFrClFBXwtjU44r5yunwJhOW4Lx0D7bstdOUNO-FkuxOtsfwAtWgBrKwpaHL2Fu0iZf8oOJ9"/>
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-primary text-on-primary font-display font-bold text-[10px] shadow-sm">เข้าไมโครเวฟได้</span>
+                <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur flex items-center justify-center text-on-surface hover:text-error transition-colors">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+
+              <div class="flex items-center gap-1.5 text-on-surface-variant text-xs mb-1.5">
+                <span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+                <span class="font-medium">วิสาหกิจกาบหมากสุราษฎร์</span>
+              </div>
+
+              <h3 class="font-display font-bold text-sm text-on-surface line-clamp-2 mb-2 group-hover:text-primary transition-colors">
+                ชุดจานกาบหมากธรรมชาติ ทรงเหลี่ยม 8 นิ้ว (แพ็ก 25 ชิ้น)
+              </h3>
+
+              <div class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-display font-bold text-[10px] mb-3">
+                <span class="material-symbols-outlined text-[14px] text-primary">eco</span>
+                <span>ไม่ใช้กาวหรือสารเคมี</span>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between mt-2">
+              <div>
+                <div class="font-display font-extrabold text-base sm:text-lg text-on-surface flex items-center gap-1.5">
+                  <span>฿160</span>
+                  <span class="text-xs text-on-surface-variant line-through font-normal">฿200</span>
+                </div>
+                <div class="text-[11px] text-on-surface-variant font-medium">★ 4.96 (890 รีวิว)</div>
+              </div>
+              <button onclick="showToast('เพิ่ม จานกาบหมากธรรมชาติ ลงรถเข็นแล้ว!')" class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary flex items-center justify-center transition-all shadow-sm active:scale-95">
+                <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-12 text-center">
+          <button onclick="filterCategory('all')" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-surface-container-highest text-on-surface font-display font-bold text-sm sm:text-base hover:bg-primary-container hover:text-on-primary-container transition-all shadow-xs">
+            <span>ดูสินค้าปลอดพลาสติกทั้งหมดกว่า 4,500+ รายการ</span>
+            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CREATOR & FARMER STORIES -->
+    <section class="w-full py-16 lg:py-24 bg-surface-container-low border-b border-outline-variant/20">
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+          <div>
+            <span class="font-display font-bold text-xs sm:text-sm text-primary uppercase tracking-wider">Community Testimonials</span>
+            <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-on-surface tracking-tight mt-1">เสียงจริงจากเกษตรกรและครีเอเตอร์</h2>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant max-w-md">
+            เรื่องราวความสำเร็จจากผู้สร้างการเปลี่ยนแปลงจริง ที่สร้างรายได้และขับเคลื่อนความยั่งยืนบน Greeny
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Story 1 -->
+          <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline-variant/30 flex flex-col justify-between hover:shadow-lg transition-all">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container shrink-0">
+                  <img class="w-full h-full object-cover" alt="ลุงสนิท บุญส่ง" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkuzOrHIQlgTBZiuF45Zo3in6SmO74yEN8AU2v3YLesWnG1rhk6Wo7n3goQHR_BJnCWg1T1i2qsHE-XUTGEGOHouESFSeqC4iNoasiQpoT1qMVrqIdRwzGv8ClWfWF93iFz3T3yIp1pvIjwJE9mjlie-pjhIxlzDYwBALfJqgkb2gToGRf1x-t9hZtZhtmc9MQYmZNh_fePdtPjhp-L3HcgF9Fwm5iI84HXxVJQ8bgeXiGS9nZtzoo"/>
+                </div>
+                <div>
+                  <div class="font-display font-extrabold text-sm sm:text-base text-on-surface">ลุงสนิท บุญส่ง</div>
+                  <div class="text-xs text-primary font-bold">สวนดินดี ออร์แกนิค (เชียงใหม่)</div>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant italic leading-relaxed">
+                "ก่อนหน้านี้ผักสลัดอินทรีย์ของเราต้องขนส่งแบบใส่โฟมสังเคราะห์ ตอนนี้ Greeny เชื่อมเรากับรถขนส่ง EV และให้ใช้กล่องชานอ้อยเก็บความเย็น ลูกค้ากรุงเทพฯ ได้กินผักสดวันรุ่งขึ้นโดยไม่สร้างขยะพลาสติกแม้แต่ชิ้นเดียว"
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs font-bold text-on-surface-variant">
+              <span>ส่งแล้วกว่า 12,000 ออเดอร์</span>
+              <span class="text-primary">Eco-Cert Verified</span>
+            </div>
+          </div>
+
+          <!-- Story 2 -->
+          <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline-variant/30 flex flex-col justify-between hover:shadow-lg transition-all">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container shrink-0">
+                  <img class="w-full h-full object-cover" alt="ณภัทร วรเวช" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb1ywzWft7eNkVf_rdcRszrxdQXJAerdEK21ufzWQsk9qR77kYLAOXjZM6jl1_H4U0l1SuLci_vTyakBPnu9juI2UspIivJ_l2zbGEdtV5bgCEkQz_-9v-IoQOoXO3WwHd_Znxkzn7JCyunEoZUBQGekk-A42BkF24x-1H5Dckyybf4lNjCYGA_-4JTMMbDYpko7Ag8Utu_-1uXVElaLmmlYF-QMOHhbHcvJOy0EnxL0j-mRa8aTv8"/>
+                </div>
+                <div>
+                  <div class="font-display font-extrabold text-sm sm:text-base text-on-surface">ณภัทร วรเวช</div>
+                  <div class="text-xs text-primary font-bold">Creator @Napat.EcoLife (24.5k)</div>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant italic leading-relaxed">
+                "การทำไลฟ์ Greeny Lives ทำให้ผู้ติดตามได้เห็นเลยว่าเม็ดโฟมแป้งข้าวโพดละลายน้ำได้จริง ไม่ใช่แค่คำโฆษณา สร้างความเชื่อมั่นและสร้างรายได้ผ่าน Creator Affiliate สม่ำเสมอทุกเดือน"
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs font-bold text-on-surface-variant">
+              <span>ยอดช้อปผ่านไลฟ์ 1.8M ฿</span>
+              <span class="text-primary">Green Creator Award</span>
+            </div>
+          </div>
+
+          <!-- Story 3 -->
+          <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline-variant/30 flex flex-col justify-between hover:shadow-lg transition-all">
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-14 h-14 rounded-full overflow-hidden bg-surface-container shrink-0">
+                  <img class="w-full h-full object-cover" alt="ดร. กานดา ศิริโชค" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmhWH_-94MhtMMYgKulzhtwfEFloQFgvIh2AE7TZvoVpVAGHSKOaeA0EUKJntxB67zL12krE8P4zpjtJdlays1OejIVP3xFN-u3AdauCWQ1SNbIC6qKgtAEsEPQ7HqMRCjYj44473fWDCTDTfOUMjrwSybvoZvnWnrPYDeWwvFAmv_KfrTpveNI0mfq7xy-NB_gP6NIDu-nsen4Rs-bd_9vOzPRdBSRJE53xA9vTbv4F8tNE_OEnMd"/>
+                </div>
+                <div>
+                  <div class="font-display font-extrabold text-sm sm:text-base text-on-surface">ดร. กานดา ศิริโชค</div>
+                  <div class="text-xs text-primary font-bold">ผู้ก่อตั้ง Green BioPack OEM</div>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant italic leading-relaxed">
+                "Seller Center ช่วยให้ร้านค้าออนไลน์ขนาดกลางและขนาดย่อมเข้าถึงเรทราคาส่งของวัสดุผักตบชวาได้โดยตรง ทำให้เราสามารถช่วยลดขยะพลาสติกกันกระแทกได้มากกว่า 15 ตันในทุกๆ เดือน"
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-xs font-bold text-on-surface-variant">
+              <span>ลดขยะ 15 ตัน/เดือน</span>
+              <span class="text-primary">Circular B2B Partner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: B2B & WHOLESALE PARTNERSHIP BANNER -->
+    <section id="b2b" class="w-full py-16 lg:py-20 bg-surface border-b border-outline-variant/20">
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="relative w-full rounded-3xl bg-inverse-surface text-inverse-on-surface p-8 lg:p-14 overflow-hidden shadow-2xl border border-outline-variant/20">
+          <div class="absolute right-0 top-0 bottom-0 w-1/2 opacity-15 pointer-events-none hidden lg:block">
+            <svg class="w-full h-full text-primary-fixed" fill="none" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="200" cy="200" r="180" stroke="currentColor" stroke-dasharray="8 8" stroke-width="2"></circle>
+              <path d="M120 280C120 180 280 140 280 140C280 140 240 300 120 280Z" fill="currentColor" fill-opacity="0.4"></path>
+              <path d="M150 250C150 170 270 150 270 150" stroke="currentColor" stroke-linecap="round" stroke-width="4"></path>
+            </svg>
+          </div>
+
+          <div class="relative z-10 max-w-2xl flex flex-col gap-4 sm:gap-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface/10 text-primary-fixed font-display font-bold text-xs">
+              <span class="material-symbols-outlined text-[16px]">domain_verification</span>
+              <span>สำหรับร้านค้าออนไลน์ คาเฟ่ และธุรกิจ SME</span>
+            </div>
+
+            <h2 class="font-display font-extrabold text-2xl sm:text-4xl tracking-tight leading-tight">
+              เปลี่ยนร้านค้าของคุณให้เป็น <br/>
+              <span class="text-primary-fixed font-display">"Green Verified Store" อย่างมืออาชีพ</span>
+            </h2>
+
+            <p class="text-xs sm:text-sm text-inverse-on-surface/85 leading-relaxed">
+              ยกระดับแบรนด์ด้วยบรรจุภัณฑ์รักษ์โลกราคาส่ง B2B สั่งพิมพ์โลโก้หมึกถั่วเหลือง (Soy Ink) ขั้นต่ำต่ำ พร้อมสิทธิ์ใช้งานตรารับรอง Greeny Eco-Certified Badge บนหน้าร้านของคุณฟรี
+            </p>
+
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <button onclick="openB2BModal()" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-display font-bold text-xs sm:text-sm shadow-md transition-all">
+                <span>ลงทะเบียนเปิดร้านค้าสีเขียว</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+              <button onclick="openB2BModal()" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-surface/10 text-inverse-on-surface hover:bg-surface/20 font-display font-bold text-xs sm:text-sm border border-outline-variant/30 transition-all">
+                <span class="material-symbols-outlined text-[18px]">request_quote</span>
+                <span>ขอใบเสนอราคาส่ง B2B</span>
+              </button>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6 pt-2 text-inverse-on-surface/75 text-xs font-medium">
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-primary-fixed text-[18px]">done</span>
+                <span>ออกใบกำกับภาษีเต็มรูปแบบ e-Tax</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-primary-fixed text-[18px]">done</span>
+                <span>เครดิตเทอม 30 วันสำหรับนิติบุคคล</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-primary-fixed text-[18px]">done</span>
+                <span>รายงานคำนวณ Carbon Footprint ฟรี</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: INTERACTIVE ECO GUIDE & NEWSLETTER -->
+    <section class="w-full py-16 lg:py-20 bg-surface-container-low">
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12">
+        <div class="bg-surface-container-lowest rounded-3xl p-6 sm:p-10 lg:p-12 shadow-sm border border-outline-variant/30 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="flex flex-col gap-2 max-w-xl text-left">
+            <div class="flex items-center gap-2 text-primary">
+              <span class="material-symbols-outlined text-[20px]">menu_book</span>
+              <span class="font-display font-bold text-xs uppercase tracking-wider">Free Eco-Packaging Guidebook</span>
+            </div>
+            <h3 class="font-display font-extrabold text-xl sm:text-3xl text-on-surface">
+              รับฟรี! คู่มือการเลือกวัสดุชีวภาพปี 2025 และโค้ดส่วนลด ฿100
+            </h3>
+            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+              สมัครรับจดหมายข่าวนวัตกรรมกรีน รายงานแนวโน้มวัสดุย่อยสลาย และรับรหัสคูปอง 
+              <button onclick="copyCoupon()" id="couponBtn" class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-extrabold hover:bg-secondary hover:text-white transition-colors" title="คลิกเพื่อคัดลอกโค้ด">
+                ECO10
+              </button> 
+              สำหรับสั่งซื้อครั้งแรก
+            </p>
+          </div>
+
+          <div class="w-full lg:w-auto">
+            <form id="newsletterForm" onsubmit="handleNewsletter(event)" class="flex flex-col sm:flex-row gap-2.5 items-stretch">
+              <input id="newsEmail" type="email" required placeholder="กรอกอีเมลสำหรับรับคู่มือ PDF" class="px-5 py-3.5 rounded-full bg-surface-container text-on-surface placeholder:text-outline text-xs sm:text-sm min-w-[280px] focus:outline-none focus:ring-2 focus:ring-primary shadow-inner border border-outline-variant/20"/>
+              <button type="submit" class="px-7 py-3.5 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-display font-bold text-xs sm:text-sm transition-colors flex items-center justify-center gap-1.5 shadow-sm shrink-0">
+                <span>รับคู่มือและโค้ดลด</span>
+                <span class="material-symbols-outlined text-[18px]">send</span>
+              </button>
+            </form>
+            <div id="newsSuccess" class="hidden p-4 rounded-2xl bg-secondary-container text-on-secondary-container border border-outline-variant/30 flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-[28px]">mark_email_read</span>
+              <div>
+                <div class="font-display font-bold text-sm">ส่งคู่มือไปยังอีเมลแล้ว!</div>
+                <div class="text-xs">ใช้โค้ดลด <span class="font-bold underline">ECO10</span> ที่หน้าชำระเงิน</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="w-full bg-surface-container-low text-on-surface-variant border-t border-outline-variant/30">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 pt-16 pb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div class="lg:col-span-2 flex flex-col gap-3">
+          <div class="flex items-center gap-2 text-primary">
+            <div class="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+              <span class="material-symbols-outlined text-[20px]">eco</span>
+            </div>
+            <span class="font-display font-extrabold text-xl text-on-surface">Greeny</span>
+          </div>
+          <p class="text-xs sm:text-sm text-on-surface-variant max-w-sm mt-1 leading-relaxed">
+            แพลตฟอร์มอีคอมเมิร์ซและคอมมูนิตี้ครีเอเตอร์สายกรีนชั้นนำของไทย คัดสรรผลิตภัณฑ์ธรรมชาติ ปลอดสารพิษ บรรจุภัณฑ์รักษ์โลก พร้อมผลักดันเศรษฐกิจหมุนเวียนที่ยั่งยืน
+          </p>
+          <div class="flex flex-wrap gap-2 mt-2">
+            <div class="flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-bold">
+              <span class="material-symbols-outlined text-primary text-[15px]">verified</span> 100% Organic
+            </div>
+            <div class="flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-bold">
+              <span class="material-symbols-outlined text-primary text-[15px]">inventory_2</span> Plastic-Free
+            </div>
+            <div class="flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-[11px] font-bold">
+              <span class="material-symbols-outlined text-primary text-[15px]">co2</span> Carbon Neutral
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h4 class="font-display font-extrabold text-sm text-on-surface">เกี่ยวกับ Greeny</h4>
+          <ul class="flex flex-col gap-2 text-xs">
+            <li><a class="hover:text-primary transition-colors" href="#">เรื่องราวความยั่งยืน</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">มาตรฐานการตรวจสอบสินค้า</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">โครงการปลูกป่าร่วมกับผู้ซื้อ</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">ร่วมงานกับเรา</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h4 class="font-display font-extrabold text-sm text-on-surface">สำหรับพาร์ทเนอร์</h4>
+          <ul class="flex flex-col gap-2 text-xs">
+            <li><button onclick="openB2BModal()" class="hover:text-primary transition-colors text-left">สมัครเป็นผู้ขาย (Seller Center)</button></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Creator Affiliate Program</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">ศูนย์การเรียนรู้ร้านค้ากรีน</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">นโยบายบรรจุภัณฑ์ชีวภาพ</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h4 class="font-display font-extrabold text-sm text-on-surface">รับข่าวสารและสิทธิพิเศษ</h4>
+          <p class="text-xs text-on-surface-variant">รับคูปองส่วนลด 100 บาทสำหรับคำสั่งซื้อแรกเมื่อสมัครรับจดหมายข่าว</p>
+          <div class="flex items-center gap-2 mt-1">
+            <input class="w-full px-3.5 py-2 rounded-full bg-surface-container text-on-surface text-xs placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="กรอกอีเมลของคุณ" type="email"/>
+            <button onclick="handleNewsletter(event)" class="px-4 py-2 rounded-full bg-primary text-on-primary font-display font-bold text-xs hover:bg-primary-container hover:text-on-primary-container transition-colors shrink-0">
+              ติดตาม
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-outline-variant/20 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+        <span>© 2025 Greeny Platform Ltd. All rights reserved. มุ่งมั่นสร้างวิถีชีวิตที่ยั่งยืน</span>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-on-surface transition-colors" href="#">นโยบายความเป็นส่วนตัว</a>
+          <a class="hover:text-on-surface transition-colors" href="#">เงื่อนไขการใช้บริการ</a>
+          <a class="hover:text-on-surface transition-colors" href="#">ความปลอดภัยข้อมูล</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= B2B MODAL ================= -->
+  <div id="b2bModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="bg-surface-container-lowest rounded-3xl p-6 sm:p-8 max-w-lg w-full border border-outline-variant/30 shadow-2xl relative">
+      <button onclick="closeB2BModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+
+      <div id="b2bFormBox">
+        <form onsubmit="handleB2BSubmit(event)" class="flex flex-col gap-4 text-left">
+          <div class="flex items-center gap-2 text-primary font-display font-bold text-xs uppercase">
+            <span class="material-symbols-outlined text-[20px]">store</span>
+            <span>Greeny B2B Wholesale Request</span>
+          </div>
+          <h3 class="font-display font-extrabold text-xl text-on-surface">ขอใบเสนอราคาส่ง &amp; สั่งผลิตแบรนด์คุณ</h3>
+          <p class="text-xs text-on-surface-variant">
+            เจ้าหน้าที่ฝ่าย B2B จะติดต่อกลับพร้อมเอกสารสเปกวัสดุและตารางราคาส่งขั้นบันไดภายใน 24 ชม.
+          </p>
+
+          <div>
+            <label class="block text-xs font-bold text-on-surface mb-1">ชื่อธุรกิจ / แบรนด์ร้านค้า</label>
+            <input type="text" required placeholder="เช่น ร้านคาเฟ่ Organic Daily, หรือ SME ช็อป" class="w-full px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/30 text-xs focus:outline-none focus:ring-2 focus:ring-primary"/>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-bold text-on-surface mb-1">เบอร์โทรศัพท์</label>
+              <input type="tel" required placeholder="08X-XXX-XXXX" class="w-full px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/30 text-xs focus:outline-none focus:ring-2 focus:ring-primary"/>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-on-surface mb-1">อีเมลติดต่อ</label>
+              <input type="email" required placeholder="business@example.com" class="w-full px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/30 text-xs focus:outline-none focus:ring-2 focus:ring-primary"/>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-on-surface mb-1">วัสดุหรือประเภทที่สนใจ</label>
+            <select class="w-full px-4 py-2.5 rounded-xl bg-surface-container border border-outline-variant/30 text-xs focus:outline-none focus:ring-2 focus:ring-primary">
+              <option>แผ่นผักตบชวากันกระแทก (ขั้นต่ำ 50 ม้วน)</option>
+              <option>เม็ดโฟมแป้งข้าวโพดละลายน้ำ (ขั้นต่ำ 20 ลัง)</option>
+              <option>จานชามกาบหมากและชานอ้อย (ขั้นต่ำ 500 ชิ้น)</option>
+              <option>สั่งพิมพ์โลโก้หมึกถั่วเหลือง Soy Ink บนกล่องคราฟท์</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full py-3 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-display font-bold text-sm shadow-md transition-all mt-2">
+            ส่งข้อมูลขอใบเสนอราคา
+          </button>
+        </form>
+      </div>
+
+      <div id="b2bSuccessBox" class="hidden text-center py-6 flex flex-col items-center gap-3">
+        <div class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+          <span class="material-symbols-outlined text-[32px]">check</span>
+        </div>
+        <h4 class="font-display font-extrabold text-xl text-on-surface">ได้รับข้อมูลเรียบร้อยแล้ว!</h4>
+        <p class="text-xs text-on-surface-variant max-w-sm">
+          ทีมงาน B2B Greeny จะจัดส่งใบเสนอราคาและสเปกวัสดุไปยังอีเมลของคุณโดยเร็วที่สุด ขอบคุณที่ร่วมสร้างธุรกิจสีเขียวครับ
+        </p>
+        <button onclick="closeB2BModal()" class="mt-2 px-6 py-2 rounded-full bg-surface-container text-on-surface font-bold text-xs">
+          ปิดหน้าต่าง
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // 1. Toast Notification Logic
+    function showToast(msg) {
+      const toast = document.getElementById("toastBox");
+      const text = document.getElementById("toastMsg");
+      text.textContent = msg;
+      toast.classList.remove("hidden");
+      setTimeout(() => {
+        toast.classList.add("hidden");
+      }, 3500);
+    }
+
+    // 2. Interactive Carbon Impact Calculator
+    const slider = document.getElementById("impactSlider");
+    const sliderBadge = document.getElementById("sliderBadge");
+    const co2Val = document.getElementById("co2Val");
+    const plasticVal = document.getElementById("plasticVal");
+    const treeVal = document.getElementById("treeVal");
+
+    slider.addEventListener("input", function(e) {
+      const orders = Number(e.target.value);
+      sliderBadge.textContent = orders + " กล่อง/เดือน";
+      co2Val.textContent = "-" + (orders * 0.45).toFixed(1) + " kg";
+      plasticVal.textContent = "-" + Math.round(orders * 3.2) + " ชิ้น";
+      treeVal.textContent = (orders * 0.08).toFixed(1) + " ต้น";
+    });
+
+    // 3. Category Filter
+    function filterCategory(cat) {
+      const tabs = ["all", "cushion", "tableware"];
+      tabs.forEach(t => {
+        const el = document.getElementById("tab-" + t);
+        if (el) {
+          if (t === cat) {
+            el.className = "px-4 py-2 rounded-full font-display font-bold text-xs sm:text-sm transition-all bg-on-surface text-surface shadow-sm";
+          } else {
+            el.className = "px-4 py-2 rounded-full font-display font-bold text-xs sm:text-sm transition-all bg-surface-container text-on-surface-variant hover:text-on-surface";
+          }
+        }
+      });
+
+      const cards = document.querySelectorAll(".prod-card");
+      cards.forEach(card => {
+        if (cat === "all" || card.dataset.cat === cat) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    // 4. Interactive Chat AI Presets
+    const aiPresets = [
+      {
+        q: '💬 "ต้องการส่งเซรามิก 500 กรัม ควรใช้วัสดุกันกระแทกแบบใด?"',
+        a: '🌱 แนะนำ "แผ่นรวงผึ้งกระดาษคราฟท์" ร่วมกับ "เม็ดโฟมแป้งข้าวโพด" ย่อยสลายได้ทันทีในน้ำ รองรับแรงกดทับได้สูงสุด 15 กก. ไร้รอยขีดข่วนครับ',
+        badge: 'ลดขยะพลาสติก 100%'
+      },
+      {
+        q: '💬 "ร้านกาแฟอยากเปลี่ยนเป็นแก้วและหลอดย่อยสลายได้ มีแบบไหนบ้าง?"',
+        a: '🌱 Greeny มีแก้วชานอ้อยเคลือบ PLA ชีวภาพ และหลอดก้านบัวธรรมชาติ ย่อยสลายในดินภายใน 90 วัน ไม่เปื่อยยุ่ยในเครื่องดื่มเย็น สั่งขั้นต่ำเพียง 100 ชิ้นครับ',
+        badge: 'ย่อยสลาย 90 วัน'
+      },
+      {
+        q: '💬 "ส่งพัสดุ EV Express ต่างจังหวัดครอบคลุมพื้นที่ไหนบ้าง?"',
+        a: '🌱 ปัจจุบันครอบคลุมกรุงเทพฯ-ปริมณฑล และหัวเมืองใหญ่ เช่น เชียงใหม่ ขอนแก่น ภูเก็ต พร้อมขยายสถานีชาร์จพลังงานแสงอาทิตย์ทั่วประเทศครบ 77 จังหวัดในปี 2025 ครับ',
+        badge: 'EV 100% Zero Emission'
+      }
+    ];
+
+    function switchAiTab(idx) {
+      document.getElementById("aiQ").textContent = aiPresets[idx].q;
+      document.getElementById("aiA").textContent = aiPresets[idx].a;
+      document.getElementById("aiBadge").textContent = aiPresets[idx].badge;
+
+      for (let i = 0; i < 3; i++) {
+        const btn = document.getElementById("aiBtn" + i);
+        if (i === idx) {
+          btn.className = "w-6 h-6 rounded-full text-[11px] font-bold bg-primary text-on-primary transition-all";
+        } else {
+          btn.className = "w-6 h-6 rounded-full text-[11px] font-bold bg-surface-container-highest text-on-surface-variant hover:bg-surface-container-lowest transition-all";
+        }
+      }
+    }
+
+    // 5. Coupon Code Copy
+    function copyCoupon() {
+      navigator.clipboard.writeText("ECO10");
+      const btn = document.getElementById("couponBtn");
+      btn.textContent = "คัดลอกแล้ว! ✓";
+      setTimeout(() => {
+        btn.textContent = "ECO10";
+      }, 2500);
+      showToast("คัดลอกโค้ดส่วนลด ECO10 เรียบร้อยแล้ว!");
+    }
+
+    // 6. Newsletter Submit
+    function handleNewsletter(e) {
+      if (e) e.preventDefault();
+      try {
+        confetti({
+          particleCount: 80,
+          spread: 60,
+          origin: { y: 0.8 }
+        });
+      } catch (err) {}
+
+      document.getElementById("newsletterForm").classList.add("hidden");
+      document.getElementById("newsSuccess").classList.remove("hidden");
+    }
+
+    // 7. B2B Modal Logic
+    function openB2BModal() {
+      document.getElementById("b2bModal").classList.remove("hidden");
+      document.getElementById("b2bFormBox").classList.remove("hidden");
+      document.getElementById("b2bSuccessBox").classList.add("hidden");
+    }
+
+    function closeB2BModal() {
+      document.getElementById("b2bModal").classList.add("hidden");
+    }
+
+    function handleB2BSubmit(e) {
+      e.preventDefault();
+      document.getElementById("b2bFormBox").classList.add("hidden");
+      document.getElementById("b2bSuccessBox").classList.remove("hidden");
+      try {
+        confetti({ particleCount: 50, spread: 50 });
+      } catch (err) {}
+    }
+  </script>
+</body>
+</html>
