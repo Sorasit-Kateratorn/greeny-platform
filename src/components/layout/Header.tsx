@@ -2,18 +2,67 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 import { HeaderRegionSwitcher } from "./HeaderRegionSwitcher";
 import { GreenyChatModal } from "@/components/chat/GreenyChatModal";
 
+const NAV_ITEMS = [
+  { id: "home", label: "หน้าแรก", href: "/" },
+  { id: "shop", label: "ช้อปสินค้า (Marketplace)", href: "/shop" },
+  { id: "categories", label: "หมวดหมู่สินค้า", href: "/search" },
+  { id: "bestseller", label: "สินค้าขายดี", href: "/search?filter=bestseller" },
+  { id: "lives", label: "Greeny Lives", href: "/shop#lives", isLive: true },
+  { id: "reviews", label: "Greeny Review", href: "/shop#reviews" },
+  { id: "flash-sales", label: "Flash Sales", href: "/shop#flash-sales", isFlash: true },
+];
+
 export function Header() {
   const router = useRouter();
+  const pathname = usePathname();
   const { itemCount, openCart } = useCart();
   const [searchQuery, setSearchQuery] = useState("");
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [chatInitialMode, setChatInitialMode] = useState<"AI" | "SUPPORT">("AI");
   const [chatInitialPrompt, setChatInitialPrompt] = useState<string | undefined>(undefined);
+  const [activeNav, setActiveNav] = useState<string>("shop");
+
+  useEffect(() => {
+    const updateActiveNav = () => {
+      const hash = typeof window !== "undefined" ? window.location.hash : "";
+      const search = typeof window !== "undefined" ? window.location.search : "";
+
+      if (pathname === "/") {
+        setActiveNav("home");
+      } else if (pathname === "/shop") {
+        if (hash === "#lives") {
+          setActiveNav("lives");
+        } else if (hash === "#reviews") {
+          setActiveNav("reviews");
+        } else if (hash === "#flash-sales") {
+          setActiveNav("flash-sales");
+        } else {
+          setActiveNav("shop");
+        }
+      } else if (pathname === "/search") {
+        if (search.includes("filter=bestseller")) {
+          setActiveNav("bestseller");
+        } else {
+          setActiveNav("categories");
+        }
+      } else {
+        setActiveNav("");
+      }
+    };
+
+    updateActiveNav();
+    window.addEventListener("hashchange", updateActiveNav);
+    window.addEventListener("popstate", updateActiveNav);
+    return () => {
+      window.removeEventListener("hashchange", updateActiveNav);
+      window.removeEventListener("popstate", updateActiveNav);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     const handleOpenChat = (e: any) => {
@@ -170,49 +219,34 @@ export function Header() {
           {/* Bottom Row: Navigation Links & Verification Tag */}
           <div className="w-full flex items-center justify-between overflow-x-auto pt-2 pb-1 gap-4">
             <nav className="flex items-center gap-1.5 whitespace-nowrap text-xs font-bold">
-              <Link
-                href="/"
-                className="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-              >
-                หน้าแรก
-              </Link>
-              <Link
-                href="/shop"
-                className="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-bold text-primary"
-              >
-                ช้อปสินค้า (Marketplace)
-              </Link>
-              <Link
-                href="/search"
-                className="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-              >
-                หมวดหมู่สินค้า
-              </Link>
-              <Link
-                href="/search?filter=bestseller"
-                className="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-              >
-                สินค้าขายดี
-              </Link>
-              <Link
-                href="/shop#lives"
-                className="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1"
-              >
-                <span className="w-2 h-2 rounded-full bg-coral-accent animate-ping"></span>
-                Greeny Lives
-              </Link>
-              <Link
-                href="/shop#reviews"
-                className="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-              >
-                Greeny Review
-              </Link>
-              <Link
-                href="/shop#flash-sales"
-                className="px-3 py-1 rounded-full bg-tertiary-fixed text-tertiary font-extrabold hover:bg-tertiary hover:text-white transition-colors"
-              >
-                Flash Sales
-              </Link>
+              {NAV_ITEMS.map((item) => {
+                const isActive = activeNav === item.id;
+
+                let linkClass = "";
+                if (item.isFlash) {
+                  linkClass = isActive
+                    ? "px-3 py-1 rounded-full bg-primary/10 text-primary font-extrabold border border-primary/20 shadow-2xs transition-colors"
+                    : "px-3 py-1 rounded-full bg-tertiary-fixed text-tertiary font-extrabold hover:bg-tertiary hover:text-white transition-colors";
+                } else if (isActive) {
+                  linkClass = "px-3 py-1 rounded-full text-primary font-extrabold bg-primary/10 shadow-2xs transition-colors";
+                } else {
+                  linkClass = "px-3 py-1 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors";
+                }
+
+                return (
+                  <Link
+                    key={item.id}
+                    href={item.href}
+                    onClick={() => setActiveNav(item.id)}
+                    className={`flex items-center gap-1 ${linkClass}`}
+                  >
+                    {item.isLive && (
+                      <span className="w-2 h-2 rounded-full bg-coral-accent animate-ping"></span>
+                    )}
+                    <span>{item.label}</span>
+                  </Link>
+                );
+              })}
             </nav>
 
             <div className="hidden lg:flex items-center gap-1.5 bg-secondary-container px-3 py-1 rounded-full text-[11px] font-bold text-on-secondary-container shadow-2xs shrink-0">
