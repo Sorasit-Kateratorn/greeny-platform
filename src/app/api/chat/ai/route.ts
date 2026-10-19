@@ -53,6 +53,7 @@ const CATALOG_PRODUCTS: CatalogProduct[] = [
     storeName: "Green Living Crafts Thailand",
     rating: 4.96,
     soldCount: 3100,
+    highlight: "ละลายน้ำได้ใน 1 นาที ไร้สารพิษ ปลอดภัย",
     image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
     tags: ["peanut", "cornstarch", "void-fill", "soluble", "dissolvable"],
   },
