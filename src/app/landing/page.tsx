@@ -28,7 +28,7 @@ const PRODUCTS: MockProduct[] = [
     name: "แผ่นผักตบชวากันกระแทก (Water Hyacinth Cushion Roll)",
     category: "cushion",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC3P-hGlXlfWv-VzeBkTpzSRv9rYBRMsIr9tM1dKBHfUqHzkhW1kvR3EF0_O5PioLtQrZX6IAtTHDFTNO57Fa51v6azcRJK9yBOZkHWaV_VAeznV6nLYM5iu9FdInmqquIpgH0QDGa4OWKWfRkOE_-s-3Zn3g2B2OISSviDbTDlwz1nsLEfxVWz0qiRngZMnQfYIzHaorlB9gE4Ud3JGutXRlaj523CRumAhg3T0wVwYSd-k-hK82Za",
+      "https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop",
     retailPrice: 145,
     originalPrice: 180,
     producer: "วิสาหกิจชุมชนบางเลน",
@@ -47,7 +47,7 @@ const PRODUCTS: MockProduct[] = [
     name: "เม็ดโฟมแป้งข้าวโพดย่อยสลาย ละลายน้ำ 100% (50 ลิตร)",
     category: "cushion",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD4pXYPJOTpwCFjnzdOh-OAxQt68ZxC5ZHLu6mJJN0Wn4Fn8VfJ1wJ0mB5WOfKupSDAFHaVVtmK3sgVjk-1_qHnmfhVhrqChxrU0L5mcoLQHRtR0n8c7nmo9qQpJkoOqcoL6oX-IRdXIHr8LOw5YfHA-c3er_94DibTZGxAlh1Y4U0RZ4qxVHaoKYG003Kwcv7gilU9UE4TNKk9RdqklrGObIyd3OEvnXwKTbjGiBzbWhk0IWMKuU6L",
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop",
     retailPrice: 189,
     originalPrice: 250,
     producer: "Green BioPack Tech",
@@ -66,7 +66,7 @@ const PRODUCTS: MockProduct[] = [
     name: "โฟมขึ้นรูปจากเส้นใยเห็ด (Mushroom Packaging Foam)",
     category: "cushion",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAL284C05ltxwGFmnlGygHSZWhut1bEE1N9rPe4BSSL9uuwnjWHzF2JONdfWsb6DOVKwSlAZ8KBG7BfH8h6t7z5qUn3Uj7wNqf1tko560K6WC8i0F3KzNgslkXSKeMKrwFfpPUtI5O70nh4z5CItoZudmyAQIgQvNTmONSRQqLM8IdE6pEyfdh3UBXSj2yV_N3f0RJUAlL6oGuIGAgQ7sPLtp6Od2-W0bdZAzrQfchRZD_9l4Shw31H",
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&auto=format&fit=crop",
     retailPrice: 320,
     originalPrice: 390,
     producer: "Mycelium EcoLab TH",
@@ -85,7 +85,7 @@ const PRODUCTS: MockProduct[] = [
     name: "ชุดจานกาบหมากธรรมชาติ ทรงเหลี่ยม 8 นิ้ว (แพ็ก 25 ชิ้น)",
     category: "tableware",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDZsOqNQCce8JUsPohlfL0bRLaiTwiqE8edw8vcYpfmX0YfFuI_2K1roofpdVLgXkWqaStAzklLdZZvNIDM6U1eqjoEjv-PG5q_dfG-Qy0dik9xE59NIHA_6XvhPxpfY0e4PLIE38gF2Eo3YGWdwOQsfQFCNme6REYl3kGMouoJYIbTiFrClFBXwtjU44r5yunwJhOW4Lx0D7bstdOUNO-FkuxOtsfwAtWgBrKwpaHL2Fu0iZf8oOJ9",
+      "https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&auto=format&fit=crop",
     retailPrice: 160,
     originalPrice: 200,
     producer: "วิสาหกิจกาบหมากสุราษฎร์",
@@ -286,7 +286,7 @@ export default function LandingPage() {
               <div className="relative w-full rounded-3xl bg-surface-container-lowest p-4 sm:p-5 shadow-2xl border border-outline-variant/30">
                 <div className="relative w-full h-72 sm:h-84 rounded-2xl overflow-hidden bg-surface-container">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEMsu1MuZZpHPDqSasRNb_1qmrKYbUlVO-UGVcN6OQzBLMBbrhG9OmakpE0ymx2muHOEBT3wzcBoBKN84tM31zR6aAlryf6_hhSXdLoJdOm5hKSvFY9WMFa-6RF0fnJ1Sf39RHjQv526b2iJNhaKeR3FV9tZ9qok_khUbnl64eLunVrnYj44Scq11iP4tZ9_TOUu1Z5jO5VLwz11LWROlajd0m1i3oQJNWnxSuh48no_Bl2WxdfvXc"
+                    src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1000&auto=format&fit=crop"
                     alt="Eco-friendly packaging products arrangement"
                     fill
                     sizes="(max-width: 768px) 100vw, 500px"
@@ -624,7 +624,7 @@ export default function LandingPage() {
             <div className="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-center hover:shadow-lg transition-all duration-300">
               <div className="w-full md:w-1/2 h-64 rounded-2xl overflow-hidden relative bg-surface-container shrink-0">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaZkDMHQ0mrir2yA6Yv9tb0iPgkZbCppWAwbySIQrXzNh9Os7kOjJcLilJBsX1BUqdWz6Ph3Sx0_LHRovZg-51JvmXj4WzWW8XL_uL5zl0sQ9xUx0R3bmJIfkGg02Mkyz2dgOSH5nBPUqaXw8LQvZWG9btup3O_D7QGMPv9ueCOZMCntKWGx-f3j6zZqk9kY4CN1QwrCCXKR3opN1g2vS90VgZYEjrPYHqpRP2G6YPpgVYdCKmT1LU"
+                  src="https://images.unsplash.com/photo-1589365278144-c9e705f843ba?w=800&auto=format&fit=crop"
                   alt="Greeny Lives streaming demo"
                   fill
                   sizes="(max-width: 768px) 100vw, 320px"
@@ -664,7 +664,7 @@ export default function LandingPage() {
             <div className="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-center hover:shadow-lg transition-all duration-300">
               <div className="w-full md:w-1/2 h-64 rounded-2xl overflow-hidden relative bg-surface-container shrink-0">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr4Ew9_eZ-24C-wD74djj8KJF6r5qe5BcYg_PqmQhKyYYCBTKVjM62cZFJAwZLw7f_CW7xI6FMIcziw9AwMOWB2rSAqqBuv95-Rx7Hjx0YNQ8Wel1FyODz177_nt6T2N4C09QbvHffFfGZ_jWR7kJMp0zVx9V5cW9I6-rDrMZT-ZQP08FiE2fvYkxXoZXVi6ElF7t_5B0S6T_4dXMmsDVG5kQtiXcoroTHeS2Rl26kCq-z_7WlQ92B"
+                  src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&auto=format&fit=crop"
                   alt="Eco packaging unboxing review"
                   fill
                   sizes="(max-width: 768px) 100vw, 320px"
@@ -781,7 +781,7 @@ export default function LandingPage() {
             <div className="bg-surface-container-lowest rounded-3xl p-6 lg:p-8 shadow-sm border border-outline-variant/30 flex flex-col md:flex-row gap-6 items-center hover:shadow-lg transition-all duration-300">
               <div className="w-full md:w-1/2 h-64 rounded-2xl overflow-hidden relative bg-surface-container shrink-0">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8gyCMPCg79-33utV_YSU74fpbrWgdovdWiwYVWiUj9l6g2SQ8wdq7JvFCHA_YueizdH2q_5JqSLUx9wBUP0WnDUrfXHj05Jy04xEPDYzoM1ObL_QdBex2ed13iqO0dqgLFQjWiEyWzkcLUtEcV-ppreYsPYwn8_JM5gE6-NB6irsqv4fR_WSSGOnKzoI54k5dJYfDQhqKfQl8g94TA0u6Snrzcr_BnOlT-0cvovN3b6chqU74yama"
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop"
                   alt="B2B Warehouse & Wholesale hub"
                   fill
                   sizes="(max-width: 768px) 100vw, 320px"
@@ -984,7 +984,7 @@ export default function LandingPage() {
                 <div className="flex items-center gap-3">
                   <div className="w-14 h-14 rounded-full overflow-hidden bg-surface-container shrink-0 relative">
                     <Image
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkuzOrHIQlgTBZiuF45Zo3in6SmO74yEN8AU2v3YLesWnG1rhk6Wo7n3goQHR_BJnCWg1T1i2qsHE-XUTGEGOHouESFSeqC4iNoasiQpoT1qMVrqIdRwzGv8ClWfWF93iFz3T3yIp1pvIjwJE9mjlie-pjhIxlzDYwBALfJqgkb2gToGRf1x-t9hZtZhtmc9MQYmZNh_fePdtPjhp-L3HcgF9Fwm5iI84HXxVJQ8bgeXiGS9nZtzoo"
+                      src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&auto=format&fit=crop"
                       alt="ลุงสนิท บุญส่ง"
                       fill
                       sizes="56px"
@@ -1016,7 +1016,7 @@ export default function LandingPage() {
                 <div className="flex items-center gap-3">
                   <div className="w-14 h-14 rounded-full overflow-hidden bg-surface-container shrink-0 relative">
                     <Image
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb1ywzWft7eNkVf_rdcRszrxdQXJAerdEK21ufzWQsk9qR77kYLAOXjZM6jl1_H4U0l1SuLci_vTyakBPnu9juI2UspIivJ_l2zbGEdtV5bgCEkQz_-9v-IoQOoXO3WwHd_Znxkzn7JCyunEoZUBQGekk-A42BkF24x-1H5Dckyybf4lNjCYGA_-4JTMMbDYpko7Ag8Utu_-1uXVElaLmmlYF-QMOHhbHcvJOy0EnxL0j-mRa8aTv8"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop"
                       alt="ณภัทร วรเวช"
                       fill
                       sizes="56px"
@@ -1048,7 +1048,7 @@ export default function LandingPage() {
                 <div className="flex items-center gap-3">
                   <div className="w-14 h-14 rounded-full overflow-hidden bg-surface-container shrink-0 relative">
                     <Image
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmhWH_-94MhtMMYgKulzhtwfEFloQFgvIh2AE7TZvoVpVAGHSKOaeA0EUKJntxB67zL12krE8P4zpjtJdlays1OejIVP3xFN-u3AdauCWQ1SNbIC6qKgtAEsEPQ7HqMRCjYj44473fWDCTDTfOUMjrwSybvoZvnWnrPYDeWwvFAmv_KfrTpveNI0mfq7xy-NB_gP6NIDu-nsen4Rs-bd_9vOzPRdBSRJE53xA9vTbv4F8tNE_OEnMd"
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop"
                       alt="ดร. กานดา ศิริโชค"
                       fill
                       sizes="56px"
