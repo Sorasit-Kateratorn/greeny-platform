@@ -251,7 +251,7 @@ export default function LandingPage() {
               {/* Dual CTA Buttons */}
               <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
                 <Link
-                  href="/search"
+                  href="/shop"
                   className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary font-display font-bold text-sm sm:text-base shadow-md hover:shadow-xl transition-all duration-200 group"
                 >
                   <span>สำรวจสินค้าเพื่อโลก</span>
@@ -948,7 +948,7 @@ export default function LandingPage() {
           {/* View All Shop CTA Bar */}
           <div className="mt-12 text-center">
             <Link
-              href="/search"
+              href="/shop"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-surface-container-highest text-on-surface font-display font-bold text-sm sm:text-base hover:bg-primary-container hover:text-on-primary-container transition-all shadow-xs"
             >
               <span>ดูสินค้าปลอดพลาสติกทั้งหมดกว่า 4,500+ รายการ</span>

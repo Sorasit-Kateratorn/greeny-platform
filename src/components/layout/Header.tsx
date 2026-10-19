@@ -163,6 +163,12 @@ export function Header() {
                 หน้าแรก
               </Link>
               <Link
+                href="/shop"
+                className="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-bold text-primary"
+              >
+                ช้อปสินค้า (Marketplace)
+              </Link>
+              <Link
                 href="/search"
                 className="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
               >
@@ -175,29 +181,23 @@ export function Header() {
                 สินค้าขายดี
               </Link>
               <Link
-                href="/#lives"
+                href="/shop#lives"
                 className="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1"
               >
                 <span className="w-2 h-2 rounded-full bg-coral-accent animate-ping"></span>
                 Greeny Lives
               </Link>
               <Link
-                href="/#reviews"
+                href="/shop#reviews"
                 className="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
               >
                 Greeny Review
               </Link>
               <Link
-                href="/#flash-sales"
+                href="/shop#flash-sales"
                 className="px-3 py-1 rounded-full bg-tertiary-fixed text-tertiary font-extrabold hover:bg-tertiary hover:text-white transition-colors"
               >
-                Force Sales (ดีลพิเศษ)
-              </Link>
-              <Link
-                href="/landing"
-                className="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-              >
-                เกี่ยวกับ Greeny
+                Flash Sales
               </Link>
             </nav>
 
