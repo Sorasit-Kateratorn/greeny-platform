@@ -50,7 +50,7 @@ export async function GET() {
       },
       packagingAI: {
         status: hasGeminiKey ? "cloud_gemini_active" : "local_expert_fallback",
-        provider: hasGeminiKey ? "Google Gemini 1.5 Flash" : "Local Expert Rule-Engine",
+        provider: hasGeminiKey ? "Google Gemini (AI Studio)" : "Local Expert Rule-Engine",
       },
       paymentGateway: {
         status: "active",
